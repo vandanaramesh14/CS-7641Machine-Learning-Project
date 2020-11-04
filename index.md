@@ -158,8 +158,8 @@ We obtained the following results for price prediction :
 
 
 <p float="left">
-  <img src="supervised_imgs/random forest/rf_price_bar.png" />
-  <img src="supervised_imgs/random forest/rf_price_line.png" />
+  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="500"/>
+  <img src="supervised_imgs/random forest/rf_price_line.png" width = "500" height ="400"/>
 </p>
 
 
