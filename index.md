@@ -127,12 +127,15 @@ Looking at the compound polarity scores, most of the reviews were strongly posit
 
 We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.  
 
-![](sentiment_imgs/pos_word_cloud.png)
-*Positive Review Word Cloud* 
-![](sentiment_imgs/neg_word_cloud.png)
-*Negative Review Word Cloud*
 
 
+| ![](sentiment_imgs/pos_word_cloud.png) | 
+|:--:| 
+| *Positive Review Word Cloud* |
+
+| ![](sentiment_imgs/neg_word_cloud.png) | 
+|:--:| 
+| *Negative Review Word Cloud* |
 
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
