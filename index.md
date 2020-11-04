@@ -158,13 +158,107 @@ We obtained the following results for price prediction :
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
-| Mean Square error      | 9026.9001|
+| Mean Square Error      | 9026.9001|
 | Root Mean Square Error   | 95.01  |
+| Mean Absolute Error |     |
 
 <p float="left">
   <img src="supervised_imgs/random forest/rf_price_bar.png" width ="500"/>
   <img src="supervised_imgs/random forest/rf_price_line.png" width = "400" height ="300"/>
 </p>
+
+We obtained the following results for rating predictions : 
+TO be filled 
+
+2. Neural Networks 
+We obtained the following results for price prediction :
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      | 27919.0681|
+| Root Mean Square Error   | 167.09|
+| Mean Absolute Error |   |
+
+ 
+<p float="left">
+  <img src="supervised_imgs/neural network /nn_price_bar.png" width ="500"/>
+  <img src="supervised_imgs/random forest/nn_price_line.png" width = "400" height ="300"/>
+</p>
+
+We obtained the following results for rating predictions : 
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      | 28.7296|
+| Root Mean Square Error   | 5.36|
+| Mean Absolute Error |   |
+
+ 
+<p float="left">
+  <img src="supervised_imgs/neural network /nn_rating_bar.png" width ="500"/>
+  <img src="supervised_imgs/random forest/nn_rating_line.png" width = "400" height ="300"/>
+</p>
+
+3. GBoost 
+We obtained the following results for price prediction :
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      | 8097.5751|
+| Root Mean Square Error   | 89.9865|
+| Mean Absolute Error | 42.3039  |
+
+ 
+<p float="left">
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png" width ="500"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" width = "400" height ="300"/>
+</p>
+
+We obtained the following results for rating predictions : 
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      | 15.1719 |
+| Root Mean Square Error   |3.8951|
+| Mean Absolute Error |   | 2.38214 |
+
+ 
+<p float="left">
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" width ="500"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png" width = "400" height ="300"/>
+</p>
+
+
+2. XGBoost 
+We obtained the following results for price prediction :
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      | 7269.424|
+| Root Mean Square Error   | 85.2609|
+| Mean Absolute Error |40.2345|
+
+ 
+<p float="left">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png" width ="500"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png" width = "400" height ="300"/>
+</p>
+
+We obtained the following results for rating predictions : 
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |16.9025|
+| Root Mean Square Error   |4.1112|
+| Mean Absolute Error |   |  2.4193|
+
+ 
+<p float="left">
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" width ="500"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png" width = "400" height ="300"/>
+</p>
+
+Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions. 
 
 
 ## References 
