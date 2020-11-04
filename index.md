@@ -121,8 +121,8 @@ First, we cleaned the review data set by taking out reviews that did not have an
 Looking at the compound polarity scores, most of the reviews were strongly positive. The average polarity score was roughly the same across all boroughs.   
 
 <p float="left">
-  <img src="sentiment_imgs/sentiment_dist.png" width="400" />
-  <img src="sentiment_imgs/sentiment_borough.png" width="400" />
+  <img src="sentiment_imgs/sentiment_dist.png" width="600", height ="600" />
+  <img src="sentiment_imgs/sentiment_borough.png" width="600" height="600" />
 </p>
 
 We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.  
