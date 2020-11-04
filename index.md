@@ -119,13 +119,11 @@ First, we cleaned the review data set by taking out reviews that did not have an
 
 
 Looking at the compound polarity scores, most of the reviews were strongly positive. The average polarity score was roughly the same across all boroughs.   
-<div>
-<p align="left">
-    <img src="sentiment_imgs/sentiment_dist.png">
- <p align="right">
-    <img src="sentiment_imgs/sentiment_borough.png">
+
+<p float="left">
+  <img src="sentiment_imgs/sentiment_dist.png" width="100" />
+  <img src="sentiment_imgs/sentiment_borough.png" width="100" />
 </p>
-</div>
 
 
 
