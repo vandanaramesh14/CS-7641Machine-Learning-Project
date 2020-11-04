@@ -49,13 +49,54 @@ Reviews.csv just contained listing IDs, date of the review, and comments. The da
 Most ML algorithms cannot handle or make sense of categorical variables, so it is important that we convert them to meaningful numerical values. Since our data is a mix of numerical and categorical, we go column by column to do the preprocessing. 
 
 ### Listings.csv 
-#### Feature Selection
+* Feature Selection
 We used XGboost Regressor to determine the important features amongst the vast amount of features we had by looking at its correlation with price and obtained the graph below.
 <p align="center">
     <img src="supervised_imgs/feature-importance-xgboost.png">
 </p>
-#### Dropped the non-important columns 
+
+* Dropped the non-important columns 
 The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc as it was shown to be not meaningful to determining price and rating. 
+
+* Amenities Column 
+We converted the list of amenities into the length of the list. In other words, we look at how many amenities the listing provides. 
+
+* Neighborhood Overview Column
+[3] Tourist Attractions in NYC - We used this list containing all the tourist attractions in NYC to be able to make sense of the neighborhood overview column.  We converted the neighborhood_overview column text into a count of tourist attractions that were mentioned in the text itself. For example, if the text mentioned ‘Times Square’, the count would be 1. 
+* Sentimental analysis on name and description  
+Non English Names and Descriptions were dropped and then sentimental analysis was performed on them to give two scores, a polarity and a compound score and added to the dataframe.  This conversion was attempted, but we found it to not have much bearing on the results, so we eventually did not add these as features to the models.  
+
+* Label Encoder for other objects 
+Label encoder encodes target labels with value between 0 and n_classes –1. All other objects were label encoded, such as neighborhood, room_type, property_type, etc. 
+
+* Removing outliers from the Price column 
+Prices were in a string format to begin with, so we had to remove ‘$’ and convert the rest into floats. Regex helped us detect and replace those strings. 
+We plotted a box plot for the price range as shown below. 
+<p align="center">
+    <img src="supervised_imgs/price-plot.png">
+</p>
+We can see that prices beyond $5500 are pretty staggered. Thus, we dropped rows with prices above 5500 considering them to be outliers.  
+
+* Bathrooms in text to float 
+The bathrooms column was empty, but bathrooms_text was not. We dropped bathrooms, and cleaned up the text version by removing words like ‘half’, and then converting the numerical string into an float. 
+
+* Dropped other rows with any NaNs
+There turned out to be several rows with NaN values for multiple columns. We decided to drop them as these correspond to noise in the data
+
+
+After cleaning the data, we eventually used about 40 features (out of the initial 78) to be able to predict our results. Some of the features are listed below : 
+
+*Number of people the property accommodates 
+*Property and room type 
+*Location of the property 
+*Minimum and Maximum night stay 
+*Availability for the next 30 days, 60 days, 90 days and 365 days.  
+*Host acceptance and response rate 
+*Number of bedrooms, beds, bathrooms 
+*A variety of review parameters 
+*The price of the listing  
+*The number of reviews per month 
+
 
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
@@ -70,7 +111,7 @@ The above graph shows us the most important columns affecting price and rating. 
 ## Appendix 
 1. [Inside Airbnb](http://insideairbnb.com/get-the-data.html)
 2. [Boroughs of NYC] (https://en.wikipedia.org/wiki/Boroughs_of_New_York_City)
-
+3. [Tourist Attractions in NYC] (https://en.wikipedia.org/wiki/List_of_buildings,_sites,_and_monuments_in_New_York_City)
 [Reviews for Inside Airbnb](https://public.opendatasoft.com/explore/dataset/airbnb-reviews)
 
 [Airbnb Reviews](https://public.opendatasoft.com/explore/dataset/airbnb-reviews/api/)
