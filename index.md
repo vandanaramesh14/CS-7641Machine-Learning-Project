@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+ Project team: Haley Xue, Meghana Jain, Vandana Ramesh, Srikesh Srinivas, Ruiqi Zhu 
 
-You can use the [editor on GitHub](https://github.com/vandanaramesh14/ml-project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction and Background 
+Airbnb is an online marketplace that allows home-owners and renters (‘hosts’) to rent out their properties (‘listings’) to guests. The hosts generally set their own prices for their listings. Although Airbnb and other rental websites provide the hosts with a set of guidelines on how to set the prices for their listings, there aren’t currently any accurate methods that help the hosts price the properties based on a large number of features.  There are quite a few paid third party software available to be able to predict the pricing range, but the hosts also need to put in their expected price of the listing, and the algorithms would change the price based on the day of the week, the season, or other outside factors.  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It is pretty important to get the Airbnb pricing right, especially in big cities around the world where competition is high and small differences in price can alter the popularity of a listing. It is necessary to find the appropriate pricing method and price range on a listing.
 
-### Markdown
+Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of five cities, New York, Boston, Amsterdam, Berlin, and Hong Kong to be able to diversify our results for pricing and ratings. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Problem Definition
+We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results ------- ***
 
-```markdown
-Syntax highlighted code block
+## Data Collection
+We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset.  
 
-# Header 1
-## Header 2
-### Header 3
+### Data Exploration 
+In order to get a general understanding of the listings data, we generated some exploratory graphs to visualize patterns and groupings.  
+#### Number of Listings for each Neighbourhood group 
+In New York City, we have the following 5 boroughs: Manhattan, Brooklyn, Queens, Staten Island, and Bronx [2]. As seen in the graph below, most Airbnb listings are found in Manhattan and Brooklyn, which is the most densely populated/landmark heavy borough and the city's most populous borough, respectively. 
+<p align="center">
+    <img src="price-plot.png">
+</p>
+## References 
+[1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
 
-- Bulleted
-- List
+[2] Quattrone, G., Greatorex, A., Quercia, D. et al. Analyzing and predicting the spatial penetration of Airbnb in U.S. cities. EPJ Data Sci. 7, 31 (2018). https://doi.org/10.1140/epjds/s13688-018-0156-6 
 
-1. Numbered
-2. List
+[3] Yang Li, Quan Pan, Tao Yang, and Lantian Guo. Reasonable price recommendation on Airbnb using multi-scale clustering. In 2016 35th Chinese Control Conference (CCC), pages 7038–7041. IEEE, 2016. 
 
-**Bold** and _Italic_ and `Code` text
+[4] Zhang, Shunyuan and Lee, Dokyun and Singh, Param Vir and Srinivasan, Kannan, How Much Is an Image Worth? Airbnb Property Demand Estimation Leveraging Large Scale Image Analytics (May 25, 2017). 
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Appendix 
+1. [Inside Airbnb](http://insideairbnb.com/get-the-data.html)
+2. [Boroughs of NYC] (https://en.wikipedia.org/wiki/Boroughs_of_New_York_City)
 
-### Jekyll Themes
+[Reviews for Inside Airbnb](https://public.opendatasoft.com/explore/dataset/airbnb-reviews)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vandanaramesh14/ml-project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[Airbnb Reviews](https://public.opendatasoft.com/explore/dataset/airbnb-reviews/api/)
 
-### Support or Contact
+[Airbnb new user bookings](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[Austin food spots](https://data.world/owentemple/austin-restaurant-health-inspection-scores/activity)
+
+[NYC Restaurants](https://data.cityofnewyork.us/Health/Restaurant-Grades/gra9-xbjk)
+
