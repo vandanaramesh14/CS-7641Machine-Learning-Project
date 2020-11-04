@@ -120,17 +120,29 @@ First, we cleaned the review data set by taking out reviews that did not have an
 
 Looking at the compound polarity scores, most of the reviews were strongly positive. The average polarity score was roughly the same across all boroughs.   
 
-<p float="left">
+<p align="center">
   <img src="sentiment_imgs/sentiment_dist.png" width="400"/>
+ </p>
+ <p align ="center">
   <img src="sentiment_imgs/sentiment_borough.png" width="400" />
 </p>
 
 We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.  
-Positive Review Word Cloud |  Negative Review Word Cloud
-:-------------------------:|:-------------------------:
-![](sentiment_imgs/pos_word_cloud.png)  |  ![](sentiment_imgs/neg_word_cloud.png)
 
+<p align="center">
+  <img src="sentiment_imgs/pos_word_cloud.png" width="400"/>
+ </p>
+ <p align="center">
+ Positive Review Word Cloud 
+ </p>
  
+ <p align ="center">
+  <img src="sentiment_imgs/neg_word_cloud.png" width="400"  />
+</p>
+<p align ="center">
+ Negative Review Word Cloud
+ </p>
+
 
 We also created two new features based on the sentiment analysis on the set of reviews. We first split up the reviews into positive, negative, and neutral classifications based on the polarity scores. Then for each listing, we calculated the average polarity score across all reviews as well as the proportion of positive reviews of that particular listing.  
 
@@ -162,7 +174,7 @@ We obtained the following results for price prediction :
 | Root Mean Square Error   | 95.01  |
 | Mean Absolute Error |     |
 
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/random forest/rf_price_bar.png" width ="500"/>
   <img src="supervised_imgs/random forest/rf_price_line.png" width = "400" height ="300"/>
 </p>
@@ -180,7 +192,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error |   |
 
  
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/neural network/nn_price_bar.png" width ="500"/>
   <img src="supervised_imgs/neural network/nn_price_line.png" width = "400" height ="300"/>
 </p>
@@ -194,7 +206,7 @@ We obtained the following results for rating predictions :
 | Mean Absolute Error |   |
 
  
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/neural network/nn_rating_bar.png" width ="500"/>
   <img src="supervised_imgs/neural network/nn__rating_line.png" width = "400" height ="300"/>
 </p>
@@ -209,7 +221,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error | 42.3039  |
 
  
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png" width ="500"/>
   <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" width = "400" height ="300"/>
 </p>
@@ -223,7 +235,7 @@ We obtained the following results for rating predictions :
 | Mean Absolute Error |   | 2.38214 |
 
  
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" width ="500"/>
   <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png" width = "400" height ="300"/>
 </p>
@@ -239,7 +251,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error |40.2345|
 
  
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png" width ="500"/>
   <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png" width = "400" height ="300"/>
 </p>
@@ -253,7 +265,7 @@ We obtained the following results for rating predictions :
 | Mean Absolute Error |   |  2.4193|
 
  
-<p float="left">
+<p align ="center">
   <img src="supervised_imgs/gboost and xgboost/xgboost-rating-1.png" width ="500"/>
   <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" width = "400" height ="300"/>
 </p>
