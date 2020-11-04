@@ -18,7 +18,7 @@ In order to get a general understanding of the listings data, we generated some 
 #### Number of Listings for each Neighbourhood group 
 In New York City, we have the following 5 boroughs: Manhattan, Brooklyn, Queens, Staten Island, and Bronx [2]. As seen in the graph below, most Airbnb listings are found in Manhattan and Brooklyn, which is the most densely populated/landmark heavy borough and the city's most populous borough, respectively. 
 <p align="center">
-    <img src="/supervised_imgs/exploration graphs/listings_neighborhood_group.png">
+    <img src="supervised_imgs/exploration graphs/listings_neighborhood_group.png">
 </p>
 
 ## References 
