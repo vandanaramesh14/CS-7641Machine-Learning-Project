@@ -141,25 +141,35 @@ We then dived a deeper into the subsets of positive and negative reviews to see 
 </p>
 <p align ="center">
  Negative Review Word Cloud
- </p>
+</p>
 
+We also created two new features based on the sentiment analysis on the set of reviews. We first split up the reviews into positive, negative, and neutral classifications based on the polarity scores. Then for each listing, we calculated the average polarity score across all reviews as well as the proportion of positive reviews of that particular listing.
 
-We also created two new features based on the sentiment analysis on the set of reviews. We first split up the reviews into positive, negative, and neutral classifications based on the polarity scores. Then for each listing, we calculated the average polarity score across all reviews as well as the proportion of positive reviews of that particular listing.  
+#### Clustering Analysis
+For unsupervised learned, data from both csv files were needed. Sentiment analysis data from the NLTK polarity scores over both reviews.csv and the filtered listings.csv was combined and syncretized. Categorical data was removed, since k-means does not handle it correctly. Data was then normalized using the StandardScaler librarym which transforms multivariate data over a mean 0 and variance 1. This is needed anytime features are measured in separate units. This subset of the data columns shows the sentiment analysis incorporated into the clustering. Note that this includes any such analysis performed on reviews.csv and listings.csv files. 
+<p align="center">
+    <img src="kmeans_imgs/input_data_sent.JPG">
+</p>
 
- 
 ## Methods
 We used the following methods as part of our modelling process:
+
 * Supervised Learning
  * Random Forest - We used a max depth of 20 in order to get the best results. 
  * GBoost 
  * XGBoost
  * Neural Networks - We used ‘relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
+ 
  <p align="center">
     <img src="supervised_imgs/neural network/nn_arch.PNG">
 </p>
 
 * Unsupervised Learning 
-(to be filled)
+	* PCA
+	* K-Means
+	* Silhouette Analysis
+	* Elbow Method
+	* NLP (i.e. Sentiment Analysis)
 
 ## Results 
 ### Supervised Learning 
@@ -286,6 +296,69 @@ We obtained the following results for rating predictions :
 
 Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions. 
 
+### Unsupervised Learning
+#### Clustering Analysis
+The bulk of mathematical analysis was performed using sklearn library imports.
+
+PCA (Principal Component Analysis) was run on the reduced features (see Cleaning & Preprocessing: Clustering Analysis) to abstract the most variance into fewer PCA components. We see in the histogram below amount of explained variance captured by each of the two components. 
+
+sklearn.decomposition.PCA APIs performed the dimensionality reduction; internally, data is centered and SVD is applied.
+<p align="center">
+    <img src="kmeans_imgs/PCA.JPG">
+</p>
+
+Elbow Method and Silhouette Analysis were utilized to determine the optimal number of clusters. It is shown from the below views that 3 clusters would provide the such optimality. Observe, for instance, the "elbow" at k=3 with an SSE slightly under 39000. We can see from Silhouette Analysis one cluster tends to dominate, suggesting some similarity among listings that cannot be reduced. 
+
+sklearn.cluster.KMeans APIs performed the work of the underlying algorithm and utilize a slightly more advanced algorithm, k-means++.
+<p align="center">
+    <img src="kmeans_imgs/Elbow.JPG">
+	<img src="kmeans_imgs/sc1_kis2.JPG">
+	<img src="kmeans_imgs/sc1_kis3.JPG">
+	<img src="kmeans_imgs/sc1_kis4.JPG">
+	<img src="kmeans_imgs/sc1_kis5.JPG">
+</p>
+
+The final K-Means data below is plotted in a more traditional format against the two PCA components.
+<p align="center">
+    <img src="kmeans_imgs/Scatter1.JPG">
+</p>
+
+It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map. We see similar listings spreead relatively evenly across NYC. 
+
+Note, howevever, that one can discern by portions of each region. For example, most of Manhattan's northern strip falls under Cluster 2, as does much of Central Brooklyn and Queens. 
+<p align="center">
+    <img src="kmeans_imgs/Map.JPG">
+</p>
+
+Finally, the exploratory analysis included running the PCA/K-Means clustering sequence on reduced features from the original input data, discarding those that had little effect on the variance (i.e. more similar, less relevant).
+
+The features utilized in this reduced analysis were: 
+PCA Analysis was run on the resultant features to abstract the most variance into fewer PCA components. 
+The histogram that plots the explained variance captured by each of PCA components. It is shown that the majority of the variance is captured by the first two components.
+<p align="center">
+    <img src="kmeans_imgs/Histogram2.JPG">
+</p>
+
+Elbow Method and Silhouette Analysis shows optimal number of clusters is again 3. Observe that the silhouette coefficient peaks at around 0.582 and SSE elbow is observed at SSE = 40000 for k=3.
+Note that dominance of one single cluster, suggesting irreducible similarity. 
+<p align="center">
+    <img src="kmeans_imgs/Elbow2.JPG">
+	<img src="kmeans_imgs/sc2_kis2.JPG">
+	<img src="kmeans_imgs/sc2_kis3.JPG">
+	<img src="kmeans_imgs/sc2_kis4.JPG">
+</p>
+
+The results of this exploratory analyis are shown, first plotted in a more traditional format against the two PCA components.
+<p align="center">
+    <img src="kmeans_imgs/Scatter2.JPG">
+</p>
+
+It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map.  We see similar listings spreead relatively evenly across NYC. 
+
+Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
+<p align="center">
+    <img src="kmeans_imgs/Map2.JPG">
+</p>
 
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
