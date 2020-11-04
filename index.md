@@ -21,9 +21,6 @@ In New York City, we have the following 5 boroughs: Manhattan, Brooklyn, Queens,
     <img src="/supervised_imgs/exploration graphs/listings_neighborhood_group.png">
 </p>
 
-<p align="center">
-    <img src=".png">
-</p>
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
 
