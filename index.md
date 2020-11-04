@@ -57,7 +57,7 @@ Tier 4 (most expensive): price is in the top 75%
 
 Manhattan has the most expensive listings, particularly around the Midtown, Chelsea, FiDi areas. Several areas of Brooklyn also have pricier listings (Dumbo, Williamsburg). This makes sense as the neighborhoods are in popular tourist areas that are close to transportation and landmarks.  
 <p align="center">
-    <img src="supervised_imgs/exploration graphs/airbnb_prices_tiers.png" width ="600" height ="600">
+    <img src="supervised_imgs/exploration graphs/airbnb_prices_tiers2.png" width ="600" height ="600">
 </p>
 
 ### Reviews CSV
