@@ -254,8 +254,8 @@ We obtained the following results for rating predictions :
 
  
 <p float="left">
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" width ="500"/>
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-1.png" width ="500"/>
+  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" width = "400" height ="300"/>
 </p>
 
 Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions. 
