@@ -57,7 +57,7 @@ Tier 4 (most expensive): price is in the top 75%
 
 Manhattan has the most expensive listings, particularly around the Midtown, Chelsea, FiDi areas. Several areas of Brooklyn also have pricier listings (Dumbo, Williamsburg). This makes sense as the neighborhoods are in popular tourist areas that are close to transportation and landmarks.  
 <p align="center">
-    <img src="supervised_imgs/exploration graphs/airbnb_prices_tiers.png" width ="500" height ="400">
+    <img src="supervised_imgs/exploration graphs/airbnb_prices_tiers.png" width ="600" height ="600">
 </p>
 
 ### Reviews CSV
@@ -70,7 +70,7 @@ Most ML algorithms cannot handle or make sense of categorical variables, so it i
 * Feature Selection
 We used XGboost Regressor to determine the important features amongst the vast amount of features we had by looking at its correlation with price and obtained the graph below.
 <p align="center">
-    <img src="supervised_imgs/feature-importance-xgboost.png" width ="500" height ="400">
+    <img src="supervised_imgs/feature-importance-xgboost.png" width ="700" height ="600">
 </p>
 
 * Dropped the non-important columns : The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc as it was shown to be not meaningful to determining price and rating. 
