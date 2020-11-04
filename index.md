@@ -181,8 +181,8 @@ We obtained the following results for price prediction :
 
  
 <p float="left">
-  <img src="supervised_imgs/neural network /nn_price_bar.png" width ="500"/>
-  <img src="supervised_imgs/random forest/nn_price_line.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/neural network/nn_price_bar.png" width ="500"/>
+  <img src="supervised_imgs/neural network/nn_price_line.png" width = "400" height ="300"/>
 </p>
 
 We obtained the following results for rating predictions : 
@@ -195,8 +195,8 @@ We obtained the following results for rating predictions :
 
  
 <p float="left">
-  <img src="supervised_imgs/neural network /nn_rating_bar.png" width ="500"/>
-  <img src="supervised_imgs/random forest/nn_rating_line.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/neural network/nn_rating_bar.png" width ="500"/>
+  <img src="supervised_imgs/neural network/nn_rating_line.png" width = "400" height ="300"/>
 </p>
 
 3. GBoost 
@@ -241,7 +241,7 @@ We obtained the following results for price prediction :
  
 <p float="left">
   <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png" width ="500"/>
-  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png" width = "400" height ="300"/>
 </p>
 
 We obtained the following results for rating predictions : 
