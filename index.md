@@ -42,6 +42,24 @@ There are 4 room types: Private rooms, Shared rooms, Entire homes/apartments, an
 #### Price Distributions for Accommodation Size: Each Neighborhood Group 
 Listing price, on average, goes up as the accommodation size goes up. 
 
+
+#### Grouping listings based on Price
+
+Taking a first look at our data, we plotted listings based on Airbnb price. Tiers are grouped by percentile:  
+
+Tier 1 (least expensive): price is in the bottom 25%  
+
+Tier 2: price is between the 25th and 50th percentiles 
+
+Tier 3: price is between the 50th and 75th percentiles 
+
+Tier 4 (most expensive): price is in the top 75% 
+
+Manhattan has the most expensive listings, particularly around the Midtown, Chelsea, FiDi areas. Several areas of Brooklyn also have pricier listings (Dumbo, Williamsburg). This makes sense as the neighborhoods are in popular tourist areas that are close to transportation and landmarks.  
+<p align="center">
+    <img src="supervised_imgs/exploration graphs/airbnb_prices_tiers.png">
+</p>
+
 ### Reviews CSV
 Reviews.csv just contained listing IDs, date of the review, and comments. The data was explored further during cleaning. 
 
@@ -89,6 +107,24 @@ After cleaning the data, we eventually used about 40 features (out of the initia
 * A variety of review parameters 
 * The price of the listing  
 * The number of reviews per month 
+
+### Reviews.csv
+We incorporated sentiment analysis on reviews of the Airbnb listings largely in order to engineer new features to be used in predicting the prices and ratings of listings. We classified reviews as positive or negative using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model from the NLTK package. It is a pretrained model that is specifically attuned to sentiments in social media but has been successful when applied to many other domains (see reference below). The VADER model is sensitive to both polarity (positive/negative) and intensity (strength) of emotion; it returns negative, neutral, positive, and compound (normalization of the three other scores) polarity scores.
+
+First, we cleaned the review data set by taking out reviews that did not have any words (e.g. there were some reviews that were a single period). A preliminary run showed that that reviews with three words or fewer or reviews that were not written in English were frequently misclassified. Therefore, we used the langdetect library to filter out non-English reviews. Interestingly, there were a surprisingly number of French guests given the number of reviews written in French.
+
+<p align="center">
+    <img src="sentiment_imgs/sentiment_languages.png">
+</p>
+
+
+Looking at the compound polarity scores, most of the reviews were strongly positive. The average polarity score was roughly the same across all boroughs.   
+<p align="left">
+    <img src="sentiment_imgs/sentiment_dist.png">
+</p>
+<p align="right">
+    <img src="sentiment_imgs/sentiment_borough.png">
+</p>
 
 
 ## References 
