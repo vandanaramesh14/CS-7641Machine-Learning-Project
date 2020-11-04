@@ -155,14 +155,15 @@ A train test split was performed with a test size of 0.2. We used MSE, MAE and R
 
 1. Random Forest 
 We obtained the following results for price prediction :
-|----------|:-------------:|
-| Mean Square Error | 9026.9001 |
-|Root Mean Square Error |    95.01   |
-| Mean Absolute Error |  | 
+
+|Mean Square Error | 9026.9001 | 
+|Root Mean Square Error| 95.01 	|
+|Mean Absolute Error 	|   	|  
 
 
-Predicted VS Actual |  Random Forest Predictions
-:-------------------------:|:-------------------------:
+
+Predicted VS Actual                                  |  Random Forest Predictions
+:---------------------------------------------------:|:--------------------------------:
 ![](supervised_imgs/random forest/rf_price_bar.png)  |  ![](supervised_imgs/random forest/rf_price_line.png)
 
  
