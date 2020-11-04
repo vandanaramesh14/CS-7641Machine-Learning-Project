@@ -155,14 +155,10 @@ A train test split was performed with a test size of 0.2. We used MSE, MAE and R
 
 1. Random Forest 
 We obtained the following results for price prediction :
-
-
-
 Predicted VS Actual                                  |  Random Forest Predictions
 :---------------------------------------------------:|:-----------------------------------------------------:
 ![](supervised_imgs/random forest/rf_price_bar.png)  |  ![](supervised_imgs/random forest/rf_price_line.png)
 
- 
 
 
 
