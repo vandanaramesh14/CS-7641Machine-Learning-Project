@@ -175,8 +175,10 @@ We obtained the following results for price prediction :
 | Mean Absolute Error |     |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="500"/>
-  <img src="supervised_imgs/random forest/rf_price_line.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/random forest/rf_price_bar.png" />
+ </p>
+ <p align ="center">
+  <img src="supervised_imgs/random forest/rf_price_line.png"/>
 </p>
 
 We obtained the following results for rating predictions : 
@@ -193,8 +195,10 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_price_bar.png" width ="500"/>
-  <img src="supervised_imgs/neural network/nn_price_line.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/neural network/nn_price_bar.png"/>
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/neural network/nn_price_line.png" />
 </p>
 
 We obtained the following results for rating predictions : 
@@ -207,8 +211,10 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_rating_bar.png" width ="500"/>
-  <img src="supervised_imgs/neural network/nn__rating_line.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/neural network/nn_rating_bar.png"/>
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/neural network/nn__rating_line.png">
 </p>
 
 3. GBoost 
@@ -222,8 +228,10 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png" width ="500"/>
-  <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png"/>
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" />
 </p>
 
 We obtained the following results for rating predictions : 
@@ -236,8 +244,10 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" width ="500"/>
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" >
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png"/>
 </p>
 
 
@@ -252,8 +262,10 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png" width ="500"/>
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png">
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png">
 </p>
 
 We obtained the following results for rating predictions : 
@@ -266,8 +278,10 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-1.png" width ="500"/>
-  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" width = "400" height ="300"/>
+  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" />
 </p>
 
 Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions. 
