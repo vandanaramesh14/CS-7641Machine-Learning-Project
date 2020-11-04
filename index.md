@@ -13,13 +13,49 @@ We plan to explore the pricing and rating predictions using supervised and unsup
 ## Data Collection
 We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset.  
 
-### Data Exploration 
+## Data Exploration 
+### Listings.csv
 In order to get a general understanding of the listings data, we generated some exploratory graphs to visualize patterns and groupings.  
 #### Number of Listings for each Neighbourhood group 
 In New York City, we have the following 5 boroughs: Manhattan, Brooklyn, Queens, Staten Island, and Bronx [2]. As seen in the graph below, most Airbnb listings are found in Manhattan and Brooklyn, which is the most densely populated/landmark heavy borough and the city's most populous borough, respectively. 
 <p align="center">
     <img src="supervised_imgs/exploration graphs/listings_neighborhood_group.png">
 </p>
+
+#### Distribution of Listing Prices
+Prices appear to be around 2000-5000 USD for most of the listings, but there are a small number of more expensive listings beyond that threshold. We plan to remove such outlier listings during data cleaning.  
+<p align="center">
+    <img src="supervised_imgs/exploration graphs/dist_prices.png">
+</p>
+
+#### Price Distributions for Each Neighborhood Group 
+Manhattan, Brooklyn, and Queens have a more spread out distribution of prices, as opposed to Staten Island and Bronx. Manhattan appears to have many more high-priced listings than the rest, due to it being a big tourist destination. Staten Island, being the most suburban of the 5, has the fewest and cheapest listings. 
+<p align="center">
+    <img src="supervised_imgs/exploration graphs/dist_prices_neighborhood.png">
+</p>
+#### Price Distributions for Room Type: Each Neighborhood Group
+There are 4 room types: Private rooms, Shared rooms, Entire homes/apartments, and Hotel Rooms
+<p align="center">
+    <img src="supervised_imgs/exploration graphs/dist_prices_roomtype.png">
+</p>
+
+#### Price Distributions for Accommodation Size: Each Neighborhood Group 
+Listing price, on average, goes up as the accommodation size goes up. 
+
+### Reviews CSV
+Reviews.csv just contained listing IDs, date of the review, and comments. The data was explored further during cleaning. 
+
+## Cleaning and Preprocessing 
+Most ML algorithms cannot handle or make sense of categorical variables, so it is important that we convert them to meaningful numerical values. Since our data is a mix of numerical and categorical, we go column by column to do the preprocessing. 
+
+### Listings.csv 
+#### Feature Selection
+We used XGboost Regressor to determine the important features amongst the vast amount of features we had by looking at its correlation with price and obtained the graph below.
+<p align="center">
+    <img src="supervised_imgs/feature-importance-xgboost.png">
+</p>
+#### Dropped the non-important columns 
+The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc as it was shown to be not meaningful to determining price and rating. 
 
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
