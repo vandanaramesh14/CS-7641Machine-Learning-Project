@@ -242,7 +242,8 @@ We obtained the following results for rating predictions :
 | Root Mean Square Error   |3.8951|
 | Mean Absolute Error |   | 2.38214 |
 
- 
+
+
 <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" >
   </p>
@@ -261,11 +262,9 @@ We obtained the following results for price prediction :
 | Mean Absolute Error |40.2345|
 
  
-<p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png">
-  </p>
- <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png">
+<p align ="middle">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png" width="200">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png" width="200">
 </p>
 
 We obtained the following results for rating predictions : 
