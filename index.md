@@ -143,7 +143,7 @@ We used the following methods as part of our modelling process:
  * XGBoost
  * Neural Networks - We used ‘relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
  <p align="center">
-    <img src="supervised_imgs/neural network/nn_arch.png">
+    <img src="supervised_imgs/neural network/nn_arch.PNG">
 </p>
 
 * Unsupervised Learning 
