@@ -109,7 +109,7 @@ After cleaning the data, we eventually used about 40 features (out of the initia
 * The number of reviews per month 
 
 ### Reviews.csv
-We incorporated sentiment analysis on reviews of the Airbnb listings largely in order to engineer new features to be used in predicting the prices and ratings of listings. We classified reviews as positive or negative using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model from the NLTK package. It is a pretrained model that is specifically attuned to sentiments in social media but has been successful when applied to many other domains (see reference below). The VADER model is sensitive to both polarity (positive/negative) and intensity (strength) of emotion; it returns negative, neutral, positive, and compound (normalization of the three other scores) polarity scores.
+We incorporated sentiment analysis on reviews of the Airbnb listings largely in order to engineer new features to be used in predicting the prices and ratings of listings. We classified reviews as positive or negative using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model from the NLTK package[4]. It is a pretrained model that is specifically attuned to sentiments in social media but has been successful when applied to many other domains (see reference below). The VADER model is sensitive to both polarity (positive/negative) and intensity (strength) of emotion; it returns negative, neutral, positive, and compound (normalization of the three other scores) polarity scores.
 
 First, we cleaned the review data set by taking out reviews that did not have any words (e.g. there were some reviews that were a single period). A preliminary run showed that that reviews with three words or fewer or reviews that were not written in English were frequently misclassified. Therefore, we used the langdetect library to filter out non-English reviews. Interestingly, there were a surprisingly number of French guests given the number of reviews written in French.
 
@@ -130,6 +130,43 @@ Positive Review Word Cloud |  Negative Review Word Cloud
 :-------------------------:|:-------------------------:
 ![](sentiment_imgs/pos_word_cloud.png)  |  ![](sentiment_imgs/neg_word_cloud.png)
 
+ 
+
+We also created two new features based on the sentiment analysis on the set of reviews. We first split up the reviews into positive, negative, and neutral classifications based on the polarity scores. Then for each listing, we calculated the average polarity score across all reviews as well as the proportion of positive reviews of that particular listing.  
+
+ 
+## Methods
+We used the following methods as part of our modelling process:
+* Supervised Learning
+ * Random Forest - We used a max depth of 20 in order to get the best results. 
+ * GBoost 
+ * XGBoost
+ * Neural Networks - We used ‘relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
+ <p align="center">
+    <img src="supervised_imgs/neural network/nn_arch.png">
+</p>
+
+* Unsupervised Learning 
+(to be filled)
+
+## Results 
+### Supervised Learning 
+A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentimental score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
+
+1. Random Forest 
+We obtained the following results for price prediction :
+|----------|:-------------:|
+| Mean Square Error | 9026.9001 |
+|Root Mean Square Error |    95.01   |
+| Mean Absolute Error |  | 
+
+
+Predicted VS Actual |  Random Forest Predictions
+:-------------------------:|:-------------------------:
+![](supervised_imgs/random forest/rf_price_bar.png)  |  ![](supervised_imgs/random forest/rf_price_line.png)
+
+ 
+
 
 
 ## References 
@@ -146,13 +183,6 @@ Positive Review Word Cloud |  Negative Review Word Cloud
 1. [Inside Airbnb](http://insideairbnb.com/get-the-data.html)
 2. [Boroughs of NYC] (https://en.wikipedia.org/wiki/Boroughs_of_New_York_City)
 3. [Tourist Attractions in NYC] (https://en.wikipedia.org/wiki/List_of_buildings,_sites,_and_monuments_in_New_York_City)
-[Reviews for Inside Airbnb](https://public.opendatasoft.com/explore/dataset/airbnb-reviews)
+4. Gilbert, C. H. E., & Hutto, E. (2014, June). Vader: A parsimonious rule-based model for sentiment analysis of social media text. In Eighth International Conference on Weblogs and Social Media (ICWSM-14). Available at (20/04/16) http://comp. social. gatech. edu/papers/icwsm14. vader. hutto. pdf (Vol. 81, p. 82). 
 
-[Airbnb Reviews](https://public.opendatasoft.com/explore/dataset/airbnb-reviews/api/)
-
-[Airbnb new user bookings](https://www.kaggle.com/c/airbnb-recruiting-new-user-bookings)
-
-[Austin food spots](https://data.world/owentemple/austin-restaurant-health-inspection-scores/activity)
-
-[NYC Restaurants](https://data.cityofnewyork.us/Health/Restaurant-Grades/gra9-xbjk)
 
