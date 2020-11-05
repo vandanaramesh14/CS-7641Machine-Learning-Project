@@ -175,7 +175,7 @@ We used the following methods as part of our modelling process:
 A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentimental score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
 
 1. Random Forest 
-We obtained the following results for price prediction :
+\\ We obtained the following results for price prediction :
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
@@ -194,7 +194,7 @@ We obtained the following results for rating predictions :
 TO be filled 
 
 2. Neural Networks 
-We obtained the following results for price prediction :
+\\ We obtained the following results for price prediction :
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
