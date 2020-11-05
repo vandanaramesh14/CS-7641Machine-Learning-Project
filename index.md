@@ -78,8 +78,7 @@ We used XGboost Regressor to determine the important features amongst the vast a
 * Amenities Column : We converted the list of amenities into the length of the list. In other words, we look at how many amenities the listing provides. 
 
 * Neighborhood Overview Column : [3] Tourist Attractions in NYC - We used this list containing all the tourist attractions in NYC to be able to make sense of the neighborhood overview column.  We converted the neighborhood_overview column text into a count of tourist attractions that were mentioned in the text itself. For example, if the text mentioned ‘Times Square’, the count would be 1. 
-* Sentimental analysis on name and description  : Non English Names and Descriptions were dropped and then sentimental analysis was performed on them to give two scores, a polarity and a compound score and added to the dataframe.  This conversion was attempted, but we found it to not have much bearing on the results, so we eventually did not add these as features to the models.  
-
+* Sentimental analysis on name and description  : Non English Names and Descriptions were dropped and then sentimental analysis was performed on them to give two scores, a polarity and a compound score and added to the dataframe.  
 * Label Encoder for other objects : Label encoder encodes target labels with value between 0 and n_classes –1. All other objects were label encoded, such as neighborhood, room_type, property_type, etc. 
 
 * Removing outliers from the Price column 
