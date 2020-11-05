@@ -76,20 +76,26 @@ Most ML algorithms cannot handle or make sense of categorical variables, so it i
 
 ### Listings.csv 
 * Feature Selection
+
 We used XGboost Regressor to determine the important features amongst the vast amount of features we had by looking at its correlation with price and obtained the graph below.
 <p align="center">
     <img src="supervised_imgs/feature-importance-xgboost.png" width ="700" height ="600">
 </p>
 
-* Dropped the non-important columns : The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc as it was shown to be not meaningful to determining price and rating. 
+* Dropped the non-important columns : 
+
+The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc as it was shown to be not meaningful to determining price and rating. 
 
 * Amenities Column : We converted the list of amenities into the length of the list. In other words, we look at how many amenities the listing provides. 
 
-* Neighborhood Overview Column : [3] Tourist Attractions in NYC - We used this list containing all the tourist attractions in NYC to be able to make sense of the neighborhood overview column.  We converted the neighborhood_overview column text into a count of tourist attractions that were mentioned in the text itself. For example, if the text mentioned ‘Times Square’, the count would be 1. 
+* Neighborhood Overview Column : 
+
+We used Tourist Attractions in NYC [3] containing all the tourist attractions in NYC to be able to make sense of the neighborhood overview column.  We converted the neighborhood_overview column text into a count of tourist attractions that were mentioned in the text itself. For example, if the text mentioned ‘Times Square’, the count would be 1. 
 * Sentimental analysis on name and description  : Non English Names and Descriptions were dropped and then sentimental analysis was performed on them to give two scores, a polarity and a compound score and added to the dataframe.  
 * Label Encoder for other objects : Label encoder encodes target labels with value between 0 and n_classes –1. All other objects were label encoded, such as neighborhood, room_type, property_type, etc. 
 
-* Removing outliers from the Price column 
+* Removing outliers from the Price column :
+
 Prices were in a string format to begin with, so we had to remove ‘$’ and convert the rest into floats. Regex helped us detect and replace those strings. 
 We plotted a box plot for the price range as shown below. 
 <p align="center">
@@ -97,9 +103,13 @@ We plotted a box plot for the price range as shown below.
 </p>
 We can see that prices beyond $5500 are pretty staggered. Thus, we dropped rows with prices above 5500 considering them to be outliers.  
 
-* Bathrooms in text to float : The bathrooms column was empty, but bathrooms_text was not. We dropped bathrooms, and cleaned up the text version by removing words like ‘half’, and then converting the numerical string into an float. 
+* Bathrooms in text to float : 
 
-* Dropped other rows with any NaNs: There turned out to be several rows with NaN values for multiple columns. We decided to drop them as these correspond to noise in the data
+The bathrooms column was empty, but bathrooms_text was not. We dropped bathrooms, and cleaned up the text version by removing words like ‘half’, and then converting the numerical string into an float. 
+
+* Dropped other rows with any NaNs: 
+
+There turned out to be several rows with NaN values for multiple columns. We decided to drop them as these correspond to noise in the data
 
 
 After cleaning the data, we eventually used about 40 features (out of the initial 78) to be able to predict our results. Some of the features are listed below : 
