@@ -46,6 +46,10 @@ There are 4 room types: Private rooms, Shared rooms, Entire homes/apartments, an
 #### Price Distributions for Accommodation Size: Each Neighborhood Group 
 Listing price, on average, goes up as the accommodation size goes up. 
 
+<p align="center">
+    <img src="supervised_imgs/exploration graphs/dist_prices_accommodation.png">
+</p>
+
 
 #### Grouping listings based on Price
 
