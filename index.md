@@ -343,7 +343,7 @@ Thus we can see that that XGBoost was the best model for price predictions and G
 #### Clustering Analysis
 The bulk of mathematical analysis was performed using sklearn library imports.
 
-PCA (Principal Component Analysis) was run on the reduced features (see Cleaning & Preprocessing: Clustering Analysis) to abstract the most variance into fewer PCA components. We see in the histogram below amount of explained variance captured by each of the two components. 
+PCA (Principal Component Analysis) was run on the reduced features to abstract the most variance into fewer PCA components. We see in the histogram below, the amount of explained variance captured by each of the two components. 
 
 sklearn.decomposition.PCA APIs performed the dimensionality reduction; internally, data is centered and SVD is applied.
 <p align="center">
@@ -396,7 +396,7 @@ The results of this exploratory analyis are shown, first plotted in a more tradi
     <img src="kmeans_imgs/Scatter2.JPG">
 </p>
 
-It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map.  We see similar listings spreead relatively evenly across NYC. 
+Thus, We see similar listings spreead relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
