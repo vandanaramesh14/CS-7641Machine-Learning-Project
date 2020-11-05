@@ -5,7 +5,7 @@ Airbnb is an online marketplace that allows home-owners and renters (‘hosts’
 
 It is pretty important to get the Airbnb pricing right, especially in big cities around the world where competition is high and small differences in price can alter the popularity of a listing. It is necessary to find the appropriate pricing method and price range on a listing.
 
-Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of five cities, New York, Boston, Amsterdam, Berlin, and Hong Kong to be able to diversify our results for pricing and ratings. 
+Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around five cities such as , New York, Boston, Amsterdam, Berlin, and Hong Kong to be able to diversify our results for pricing and ratings. 
 
 ## Problem Definition
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
@@ -369,12 +369,12 @@ Note, howevever, that one can discern by portions of each region. For example, q
 <p align="center">
     <img src="kmeans_imgs/Map2.JPG">
 </p>
-## Discussion 
+## Discussion and future work
 
+* We plan to perform cluster analysis using GMM and see if that provides us with better results. 
+* Next steps include combining the clustering with the XGboost and Gboost models and compare. We anticipate the models applied to each cluster will be more accurate than applying to entire listings data.
+* We plan to obtain results for three cities and try to figure out the geographic distributions of Airbnb listings. 
 
-Next steps include combining the clustering with the linear regression model and compare (anticipate model applied to each cluster will be more accurate than applying to entire listings data) 
-
-Compare results across cities? Five seems ambitious.... 
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
 
