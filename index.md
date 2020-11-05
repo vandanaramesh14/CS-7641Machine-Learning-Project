@@ -197,7 +197,18 @@ We obtained the following results for price prediction :
 </p>
 
 We obtained the following results for rating predictions : 
-TO be filled 
+MAE: 2.8132430647291944
+MSE: 30.905052840158522
+RMSE: 5.559231317381794
+
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      | 30.905|
+| Root Mean Square Error   | 5.5592  |
+| Mean Absolute Error |2.8132   |
+
+
 
 2. Neural Networks 
 
