@@ -201,9 +201,6 @@ We obtained the following results for price prediction :
 </p>
 
 We obtained the following results for rating predictions : 
-MAE: 2.8132430647291944
-MSE: 30.905052840158522
-RMSE: 5.559231317381794
 
 
 | Evaluation Method      | Value |
@@ -212,6 +209,12 @@ RMSE: 5.559231317381794
 | Root Mean Square Error   | 5.5592  |
 | Mean Absolute Error |2.8132   |
 
+<p align ="center">
+  <img src="supervised_imgs/random forest/rf_rating_bar.png" />
+ </p>
+ <p align ="center">
+  <img src="supervised_imgs/random forest/rf_rating_line.png"/>
+</p>
 
 
 2. Neural Networks 
