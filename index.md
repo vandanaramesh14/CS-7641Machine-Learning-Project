@@ -194,7 +194,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error | 43.82    |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="500"/>
+  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="800"/>
  </p>
  <p align ="center">
   <img src="supervised_imgs/random forest/rf_price_line.png"/>
