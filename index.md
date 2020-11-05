@@ -14,6 +14,8 @@ We plan to explore the pricing and rating predictions using supervised and unsup
 We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset.  
 
 ## Data Exploration 
+We started to explore the data for New York City alone for the midterm progress of the project. 
+
 ### Listings.csv
 In order to get a general understanding of the listings data, we generated some exploratory graphs to visualize patterns and groupings.  
 #### Number of Listings for each Neighbourhood group 
@@ -33,7 +35,9 @@ Manhattan, Brooklyn, and Queens have a more spread out distribution of prices, a
 <p align="center">
     <img src="supervised_imgs/exploration graphs/dist_prices_neighborhood.png">
 </p>
+
 #### Price Distributions for Room Type: Each Neighborhood Group
+
 There are 4 room types: Private rooms, Shared rooms, Entire homes/apartments, and Hotel Rooms
 <p align="center">
     <img src="supervised_imgs/exploration graphs/dist_prices_roomtype.png">
@@ -183,7 +187,7 @@ We obtained the following results for price prediction :
 | ----------- | ----------- |
 | Mean Square Error      | 9026.9001|
 | Root Mean Square Error   | 95.01  |
-| Mean Absolute Error |     |
+| Mean Absolute Error | 43.82    |
 
 <p align ="center">
   <img src="supervised_imgs/random forest/rf_price_bar.png" />
@@ -204,7 +208,7 @@ We obtained the following results for price prediction :
 | ----------- | ----------- |
 | Mean Square Error      | 27919.0681|
 | Root Mean Square Error   | 167.09|
-| Mean Absolute Error |   |
+| Mean Absolute Error |  67.14 |
 
  
 <p align ="center">
@@ -220,7 +224,7 @@ We obtained the following results for rating predictions :
 | ----------- | ----------- |
 | Mean Square Error      | 28.7296|
 | Root Mean Square Error   | 5.36|
-| Mean Absolute Error |   |
+| Mean Absolute Error | 3.84  |
 
  
 <p align ="center">
