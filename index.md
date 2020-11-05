@@ -196,7 +196,9 @@ We obtained the following results for rating predictions :
 TO be filled 
 
 2. Neural Networks 
-\\ We obtained the following results for price prediction :
+
+
+We obtained the following results for price prediction :
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
@@ -229,6 +231,8 @@ We obtained the following results for rating predictions :
 </p>
 
 3. GBoost 
+
+
 We obtained the following results for price prediction :
 
 | Evaluation Method      | Value |
@@ -262,7 +266,8 @@ We obtained the following results for rating predictions :
 </p>
 
 
-2. XGBoost 
+4. XGBoost 
+
 We obtained the following results for price prediction :
 
 | Evaluation Method      | Value |
