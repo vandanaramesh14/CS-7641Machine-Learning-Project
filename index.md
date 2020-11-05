@@ -194,7 +194,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error | 43.82    |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="800"/>
+  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="1000"/>
  </p>
  <p align ="center">
   <img src="supervised_imgs/random forest/rf_price_line.png"/>
@@ -230,7 +230,7 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_price_bar.png"/>
+  <img src="supervised_imgs/neural network/nn_price_bar.png"  width ="1000" />
   </p>
  <p align ="center">
   <img src="supervised_imgs/neural network/nn_price_line.png" />
@@ -265,7 +265,7 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png"  width ="1000" />
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" />
@@ -281,7 +281,7 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" >
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png"  >
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png"/>
@@ -300,7 +300,7 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png"  width ="1000" >
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png">
