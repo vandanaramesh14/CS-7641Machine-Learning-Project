@@ -292,7 +292,7 @@ We obtained the following results for rating predictions :
 | ----------- | ----------- |
 | Mean Square Error      | 15.1719 |
 | Root Mean Square Error   |3.8951|
-| Mean Absolute Error |   | 2.38214 |
+| Mean Absolute Error | 2.38214   |
 
  
 <p align ="center">
