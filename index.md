@@ -154,10 +154,10 @@ For unsupervised learned, data from both csv files were needed. Sentiment analys
 We used the following methods as part of our modelling process:
 
 * Supervised Learning
- * Random Forest - We used a max depth of 20 in order to get the best results. 
- * GBoost 
- * XGBoost
- * Neural Networks - We used ‘relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
+	* Random Forest - We used a max depth of 20 in order to get the best results. 
+ 	* GBoost 
+ 	* XGBoost
+ 	* Neural Networks - We used ‘Relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
  
  <p align="center">
     <img src="supervised_imgs/neural network/nn_arch.PNG">
