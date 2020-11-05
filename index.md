@@ -197,7 +197,7 @@ We used the following methods as part of our modelling process:
 ### Supervised Learning 
 A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentimental score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
 
-1. Random Forest 
+#### Random Forest 
 
 
 We obtained the following results for price prediction :
@@ -232,7 +232,7 @@ We obtained the following results for rating predictions :
 </p>
 
 
-2. Neural Networks 
+#### Neural Networks 
 
 
 We obtained the following results for price prediction :
@@ -267,7 +267,7 @@ We obtained the following results for rating predictions :
   <img src="supervised_imgs/neural network/nn__rating_line.png">
 </p>
 
-3. GBoost 
+#### GBoost 
 
 
 We obtained the following results for price prediction :
@@ -303,7 +303,7 @@ We obtained the following results for rating predictions :
 </p>
 
 
-4. XGBoost 
+#### XGBoost 
 
 We obtained the following results for price prediction :
 
