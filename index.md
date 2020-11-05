@@ -372,7 +372,7 @@ Note, howevever, that one can discern by portions of each region. For example, q
 
 ## Discussion and future work
 * We plan to perform further cluster analysis using GMM and see if that provides us with better results.
-We can attempt to cluster by only one feature (e.g room type), as well as different combination of features.
+We will cluster by only one feature (e.g room type), as well as different combination of features.
 * Next steps include combining the clustering with the XGboost and Gboost models and compare. We anticipate the models applied to each cluster will be more accurate than applying to entire listings data.
 * We plan to obtain results for three cities and try to figure out the geographic distributions of Airbnb listings. 
 
