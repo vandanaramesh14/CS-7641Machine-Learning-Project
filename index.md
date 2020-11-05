@@ -365,7 +365,12 @@ Note, howevever, that one can discern by portions of each region. For example, q
 <p align="center">
     <img src="kmeans_imgs/Map2.JPG">
 </p>
+## Discussion 
 
+
+Next steps include combining the clustering with the linear regression model and compare (anticipate model applied to each cluster will be more accurate than applying to entire listings data) 
+
+Compare results across cities? Five seems ambitious.... 
 ## References 
 [1] Pouya Rezazadeh Kalehbasti, Liubov Nikolenko, and Hoormazd Rezaei. Airbnb Price Prediction Using Machine Learning and Sentiment Analysis. arXiv preprint arXiv:1907.12665, 2019. 
 
