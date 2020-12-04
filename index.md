@@ -153,19 +153,19 @@ Looking at the compound polarity scores, most of the reviews were strongly posit
 We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.  
 
 <p align="center">
-  <img src="sentiment_imgs/nyc_pos_word_cloud.png" width="300" hspace="10" /><img src="sentiment_imgs/nyc_neg_word_cloud.png" width="300"/>
+  <img src="sentiment_imgs/nyc_pos_word_cloud.png" width="250" hspace="5" /><img src="sentiment_imgs/nyc_neg_word_cloud.png" width="250"/>
  </p>
  
  <p align="center">
-  <img src="sentiment_imgs/am_pos_word_cloud.png" width="300" hspace="10" /><img src="sentiment_imgs/am_neg_word_cloud.png" width="300"/>
+  <img src="sentiment_imgs/am_pos_word_cloud.png" width="250" hspace="5" /><img src="sentiment_imgs/am_neg_word_cloud.png" width="250"/>
  </p>
  
  <p align="center">
-  <img src="sentiment_imgs/bristol_pos_word_cloud.png" width="300" hspace="10" /><img src="sentiment_imgs/bristol_neg_word_cloud.png" width="300"/>
+  <img src="sentiment_imgs/bristol_pos_word_cloud.png" width="250" hspace="5" /><img src="sentiment_imgs/bristol_neg_word_cloud.png" width="250"/>
  </p>
  
  <p align="center">
-  <img src="sentiment_imgs/hk_pos_word_cloud.png" width="300" hspace="10" /><img src="sentiment_imgs/hk_neg_word_cloud.png" width="300"/>
+  <img src="sentiment_imgs/hk_pos_word_cloud.png" width="250" hspace="5" /><img src="sentiment_imgs/hk_neg_word_cloud.png" width="250"/>
  </p>
  
  
