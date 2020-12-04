@@ -135,8 +135,7 @@ We then dived a deeper into the subsets of positive and negative reviews to see 
   <img src="sentiment_imgs/neg_word_cloud.png" width="400"  />
  </p>
  <p align="center">
- Positive Review Word Cloud
- Negative Review Word Cloud
+ Positive Review Word                      Negative Review Word Cloud
  </p>
  
  <p align ="center">
