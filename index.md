@@ -133,7 +133,7 @@ After cleaning the data, we eventually used about 40 features (out of the initia
 ### Reviews.csv
 We incorporated sentiment analysis on reviews of the Airbnb listings largely in order to engineer new features to be used in predicting the prices and ratings of listings. We classified reviews as positive or negative using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model from the NLTK package [4]. It is a pretrained model that is specifically attuned to sentiments in social media but has been successful when applied to many other domains (see reference below). The VADER model is sensitive to both polarity (positive/negative) and intensity (strength) of emotion; it returns negative, neutral, positive, and compound (normalization of the three other scores) polarity scores.
 
-First, we cleaned the review data set by taking out reviews that did not have any words (e.g. there were some reviews that were a single period). A preliminary run showed that that reviews with three words or fewer or reviews that were not written in English were frequently misclassified. Therefore, we used the langdetect library to filter out non-English reviews. Interestingly, there were a surprisingly number of French guests given the number of reviews written in French.
+First, we cleaned the review data set by taking out reviews that did not have any words (e.g. there were some reviews that were a single period). A preliminary run showed that that reviews with three words or fewer or reviews that were not written in English were frequently misclassified. Therefore, we used the langdetect library to filter out non-English reviews. Looking at the NYC sentiment analysis, interestingly, there were a surprisingly number of French guests given the number of reviews written in French.
 
 <p align="center">
     <img src="sentiment_imgs/sentiment_languages.png">
@@ -149,8 +149,13 @@ Looking at the compound polarity scores, most of the reviews were strongly posit
   <img src="sentiment_imgs/sentiment_borough.png" width="400" />
 </p>
 
+For the other three cities, the polarity distributions of the reviews written in English looked very similar to those of New York with most reviews being very positive. However, while the Amsterdam and Bristol datasets had most reviews written in English, almost half of the reviews in the Hong Kong dataset were written in Chinese or Korean. This distribution of languages in the Hong Kong reviews likely introduced increased error to our Hong Kong analysis and may have contributed to the weak model perfomances. The distrbution graph can be found below: 
 
-We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.  
+<p align="center">
+  <img src="sentiment_imgs/hk_review_lang_dist.png" width="500"/>
+</p>
+
+We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. Similar words appeared accross all four cities. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.   
 
 <p align="center">
   <img src="sentiment_imgs/nyc_pos_word_cloud.png" width="250" hspace="5" /><img src="sentiment_imgs/nyc_neg_word_cloud.png" width="250"/>
@@ -406,6 +411,13 @@ Thus, We see similar listings spreead relatively evenly across NYC.
 Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
     <img src="kmeans_imgs/Map2.JPG">
+</p>
+
+### Combining Supervised and Unsupervised Learning
+To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions worse. 
+
+<p align="center">
+    <img src="xgboost_kmeans_results.png" width=400>
 </p>
 
 ## Discussion and future work
