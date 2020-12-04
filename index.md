@@ -132,9 +132,7 @@ We then dived a deeper into the subsets of positive and negative reviews to see 
 
 <p align="center">
   <img src="sentiment_imgs/pos_word_cloud.png" width="400" hspace="30" /><img src="sentiment_imgs/neg_word_cloud.png" width="400"/>
- </p>
- <p align="center">
- Positive Review Word &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Negative Review Word Cloud
+  NYC Positive Review Word Cloud
  </p>
 
 
