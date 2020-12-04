@@ -149,22 +149,27 @@ Looking at the compound polarity scores, most of the reviews were strongly posit
   <img src="sentiment_imgs/sentiment_borough.png" width="400" />
 </p>
 
+
 We then dived a deeper into the subsets of positive and negative reviews to see what guests frequently mentioned in their reviews and what made an Airbnb listing more popular among guests. For the subset of positive reviews, it seems that guests frequently mentioned the convenience of location and the cleanliness of the Airbnb. For the subset of negative reviews, it seems that many of the negative reviews are mostly automated postings from the Airbnb site stating that the host cancelled the reservation. A preview of negative reviews confirms this.  
 
 <p align="center">
-  <img src="sentiment_imgs/pos_word_cloud.png" width="400"/>
- </p>
- <p align="center">
- Positive Review Word Cloud 
+  <img src="sentiment_imgs/nyc_pos_word_cloud.png" width="400" hspace="30" /><img src="sentiment_imgs/nyc_neg_word_cloud.png" width="400"/>
  </p>
  
- <p align ="center">
-  <img src="sentiment_imgs/neg_word_cloud.png" width="400"  />
-</p>
-<p align ="center">
- Negative Review Word Cloud
-</p>
-
+ <p align="center">
+  <img src="sentiment_imgs/am_pos_word_cloud.png" width="400" hspace="30" /><img src="sentiment_imgs/am_neg_word_cloud.png" width="400"/>
+ </p>
+ 
+ <p align="center">
+  <img src="sentiment_imgs/bristol_pos_word_cloud.png" width="400" hspace="30" /><img src="sentiment_imgs/bristol_neg_word_cloud.png" width="400"/>
+ </p>
+ 
+ <p align="center">
+  <img src="sentiment_imgs/hk_pos_word_cloud.png" width="400" hspace="30" /><img src="sentiment_imgs/hk_neg_word_cloud.png" width="400"/>
+ </p>
+ 
+ 
+ 
 We also created two new features based on the sentiment analysis on the set of reviews. We first split up the reviews into positive, negative, and neutral classifications based on the polarity scores. Then for each listing, we calculated the average polarity score across all reviews as well as the proportion of positive reviews of that particular listing.
 
 For unsupervised learned, data from both csv files were needed. Sentiment analysis data from the NLTK polarity scores over both reviews.csv and the filtered listings.csv was combined and syncretized. Categorical data was removed, since k-means does not handle it correctly. Data was then normalized using the StandardScaler librarym which transforms multivariate data over a mean 0 and variance 1. This is needed anytime features are measured in separate units. This subset of the data columns shows the sentiment analysis incorporated into the clustering. Note that this includes any such analysis performed on reviews.csv and listings.csv files. 
