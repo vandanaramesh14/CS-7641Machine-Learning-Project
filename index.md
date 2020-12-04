@@ -149,7 +149,7 @@ Looking at the compound polarity scores, most of the reviews were strongly posit
   <img src="sentiment_imgs/sentiment_borough.png" width="400" />
 </p>
 
-For the other three cities, the polarity distributions of the reviews written in English looked very similar to those of New York with most reviews being very positive. However, while the Amsterdam and Bristol datasets had most reviews written in English, almost half of the reviews in the Hong Kong dataset were written in Chinese or Korean. This distribution of languages in the Hong Kong reviews likely introduced increased error to our Hong Kong analysis and may have contributed to the weak model perfomances. The distrbution graph can be found below: 
+For the other three cities, the polarity distributions of the reviews written in English looked very similar to those of New York with most reviews being very positive. However, while the Amsterdam and Bristol datasets had most reviews written in English, almost half of the reviews in the Hong Kong dataset were written in Chinese or Korean. This distribution of languages in the Hong Kong reviews likely introduced increased error to our Hong Kong analysis and may have contributed to the weak model perfomances. The distribution graph can be found below: 
 
 <p align="center">
   <img src="sentiment_imgs/hk_review_lang_dist.png" width="500"/>
@@ -414,7 +414,7 @@ Note, howevever, that one can discern by portions of each region. For example, q
 </p>
 
 ### Combining Supervised and Unsupervised Learning
-To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions worse. 
+To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions worse. 
 
 <p align="center">
     <img src="xgboost_kmeans_results.png" width=400>
