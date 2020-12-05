@@ -363,7 +363,7 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" width ="800"  height="400" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" width ="1000"  height="700" />
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-2.png" />
