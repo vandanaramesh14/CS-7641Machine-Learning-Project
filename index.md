@@ -420,6 +420,75 @@ We obtained the following results for rating predictions:
 
 
 ### Hong Kong, China
+
+#### Gboost
+We obtained the following results for price predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |144343.8335|
+| Root Mean Square Error   |379.926|
+| Mean Absolute Error | 195.654|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/hk-price-gboost-1.png"/>
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/hk-price-gboost-2.png" />
+</p>
+
+We obtained the following results for rating predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |11.2184|
+| Root Mean Square Error   |3.3484|
+| Mean Absolute Error | 2.1047|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-2.png" />
+</p>
+
+#### XGBoost 
+We obtained the following results for price predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |7357.9843|
+| Root Mean Square Error   |85.7786|
+| Mean Absolute Error | 44.271|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-1.png"  />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-2.png" />
+</p>
+
+We obtained the following results for rating predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |5755.6464|
+| Root Mean Square Error   |75.8685|
+| Mean Absolute Error | 42.8212|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-xgboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-xgboost-2.png" />
+</p>
+
+
+
 ### Bristol, United Kingdom
 ### Unsupervised Learning
 #### Clustering Analysis
