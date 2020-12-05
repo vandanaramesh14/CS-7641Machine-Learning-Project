@@ -580,10 +580,10 @@ Elbow Method and Silhouette Analysis were utilized to determine the optimal numb
 sklearn.cluster.KMeans APIs performed the work of the underlying algorithm and utilize a slightly more advanced algorithm, k-means++.
 <p align="center">
     <img src="kmeans_imgs/Elbow.JPG">
-	<img src="kmeans_imgs/sc1_kis2.JPG">
-	<img src="kmeans_imgs/sc1_kis3.JPG">
-	<img src="kmeans_imgs/sc1_kis4.JPG">
-	<img src="kmeans_imgs/sc1_kis5.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc1_kis2.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc1_kis3.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc1_kis4.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc1_kis5.JPG">
 </p>
 
 The final K-Means data below is plotted in a more traditional format against the two PCA components.
@@ -611,9 +611,9 @@ Elbow Method and Silhouette Analysis shows optimal number of clusters is again 3
 Note that dominance of one single cluster, suggesting irreducible similarity. 
 <p align="center">
     <img src="kmeans_imgs/Elbow2.JPG">
-	<img src="kmeans_imgs/sc2_kis2.JPG">
-	<img src="kmeans_imgs/sc2_kis3.JPG">
-	<img src="kmeans_imgs/sc2_kis4.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc2_kis2.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc2_kis3.JPG">
+	<img height="300" width="300" src="kmeans_imgs/sc2_kis4.JPG">
 </p>
 
 The results of this exploratory analyis are shown, first plotted in a more traditional format against the two PCA components.
