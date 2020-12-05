@@ -442,16 +442,16 @@ We obtained the following results for rating predictions:
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
-| Mean Square Error      |11.2184|
-| Root Mean Square Error   |3.3484|
-| Mean Absolute Error | 2.1047|
+| Mean Square Error      |19.0294|
+| Root Mean Square Error   |4.3622|
+| Mean Absolute Error | 3.0009|
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-rating-gboost-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-rating-gboost-2.png" />
 </p>
 
 #### XGBoost 
@@ -459,37 +459,105 @@ We obtained the following results for price predictions:
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
-| Mean Square Error      |7357.9843|
-| Root Mean Square Error   |85.7786|
-| Mean Absolute Error | 44.271|
+| Mean Square Error      |150159.722|
+| Root Mean Square Error   |387.5044|
+| Mean Absolute Error | 189.1131|
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/hk-price-xgboost-1.png"  />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-price-xgboost-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
 
 | Evaluation Method      | Value |
 | ----------- | ----------- |
-| Mean Square Error      |5755.6464|
-| Root Mean Square Error   |75.8685|
-| Mean Absolute Error | 42.8212|
+| Mean Square Error      |21.2487|
+| Root Mean Square Error   |4.6096|
+| Mean Absolute Error | 3.0623|
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-xgboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-rating-xgboost-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-rating-xgboost-2.png" />
 </p>
 
 
 
 ### Bristol, United Kingdom
+
+#### Gboost
+We obtained the following results for price predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |2213.365|
+| Root Mean Square Error   |47.0464|
+| Mean Absolute Error | 20.96613|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-price-gboost-1.png"/>
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-price-gboost-2.png" />
+</p>
+
+We obtained the following results for rating predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |10.8849|
+| Root Mean Square Error   |3.2992|
+| Mean Absolute Error | 2.097|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-rating-gboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-rating-gboost-2.png" />
+</p>
+
+#### XGBoost 
+We obtained the following results for price predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |791.4988|
+| Root Mean Square Error   |28.1335|
+| Mean Absolute Error | 17.0718|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-price-xgboost-1.png"  />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-price-xgboost-2.png" />
+</p>
+
+We obtained the following results for rating predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |2.2319|
+| Root Mean Square Error   |12.1816|
+| Mean Absolute Error | 2.2319|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-rating-xgboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/bristol-rating-xgboost-2.png" />
+</p>
+
+
 ### Unsupervised Learning
 #### Clustering Analysis
 The bulk of mathematical analysis was performed using sklearn library imports.
