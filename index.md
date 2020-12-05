@@ -9,6 +9,7 @@ Through our project, we plan to learn about the features that would contribute t
 
 ## Problem Definition
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
+(Need to say what is new in our approach) 
 
 ## Data Collection
 We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset. (need to write here on number of records in each dataset we used and that we used three cities)
@@ -420,7 +421,7 @@ We obtained the following results for rating predictions:
 </p>
 
 
-XGBoost performed better for price predictions compared to Gradient Boost for Amsterdam whereas both models performed very similarly for rating predictions. 
+For Amsterdam, XGBoost performed better for price predictions compared to Gradient Boost for Amsterdam whereas both models performed very similarly for rating predictions. 
 
 ### Hong Kong, China
 
@@ -492,7 +493,7 @@ We obtained the following results for rating predictions:
 
 
 Hong Kong did not give us satisfactory results for price predictions for these models. We believe this could be because ................
-Gradient boost performed better than XGBoost for rating predictions.
+Gradient boosting performed better than XGBoost for rating predictions.
 
 ### Bristol, United Kingdom
 
@@ -562,7 +563,7 @@ We obtained the following results for rating predictions:
   <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" />
 </p>
 
-This dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
+Bristol dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
 
 ### Unsupervised Learning
 #### Clustering Analysis
@@ -636,10 +637,9 @@ To see if we could improve our model predictions for prices, we tried combining 
 </p>
 
 ## Discussion and future work
-* We plan to perform further cluster analysis using GMM and see if that provides us with better results.
-We will cluster by only one feature (e.g room type), as well as different combination of features.
-* Next steps include combining the clustering with the XGboost and Gboost models and compare. We anticipate the models applied to each cluster will be more accurate than applying to entire listings data.
-* We plan to obtain results for three cities and try to figure out the geographic distributions of Airbnb listings. 
+* Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
+* It also does seem like datasets with smaller number of rows such as Bristol,England tends to perform too well and hence might be overfitting the supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
+
 
 ## References 
 
