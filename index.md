@@ -221,7 +221,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error | 43.82    |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="1000"/>
+  <img src="supervised_imgs/random forest/rf_price_bar.png"/>
  </p>
  <p align ="center">
   <img src="supervised_imgs/random forest/rf_price_line.png"/>
@@ -257,7 +257,7 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_price_bar.png"  width ="1000" />
+  <img src="supervised_imgs/neural network/nn_price_bar.png"  />
   </p>
  <p align ="center">
   <img src="supervised_imgs/neural network/nn_price_line.png" />
