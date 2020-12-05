@@ -5,7 +5,7 @@ Airbnb is an online marketplace that allows home-owners and renters (‘hosts’
 
 It is pretty important to get the Airbnb pricing right, especially in big cities around the world where competition is high and small differences in price can alter the popularity of a listing. It is necessary to find the appropriate pricing method and price range on a listing.
 
-Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around five cities such as , New York, Boston, Amsterdam, Berlin, and Hong Kong to be able to diversify our results for pricing and ratings. 
+Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around four cities such as , New York, Amsterdam, Bristol, and Hong Kong to be able to diversify our results for pricing and ratings. 
 
 ## Problem Definition
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
@@ -203,6 +203,10 @@ We used the following methods as part of our modelling process:
 	* Silhouette Analysis
 	* Elbow Method
 	* NLP (i.e. Sentiment Analysis)
+	
+* Combining Supervised and Unsupervised Learning (tbd)
+
+Our approach is innovative because we applied sentimental analysis on reviews to include predictions for price and rating, and we also applied regression models on each cluster in order to achieve better results. 
 
 ## Results 
 ### Supervised Learning 
@@ -637,6 +641,7 @@ To see if we could improve our model predictions for prices, we tried combining 
 </p>
 
 ## Discussion and future work
+* We can see that ....
 * Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
 * It also does seem like datasets with smaller number of rows such as Bristol,England tends to perform too well and hence might be overfitting the supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
 
