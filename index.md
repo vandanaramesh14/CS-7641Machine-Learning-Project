@@ -556,7 +556,7 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol--xgboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-1.png" />
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" />
