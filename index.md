@@ -188,7 +188,7 @@ We used the following methods as part of our modelling process:
 
 * Supervised Learning 
 	* Random Forest - We used a max depth of 20 in order to get the best results. 
-	* GBoost 
+	* Gradient Boosting
 	* XGBoost
 	* Neural Networks - We used ‘Relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
  
@@ -279,7 +279,7 @@ We obtained the following results for rating predictions :
   <img src="supervised_imgs/neural network/nn__rating_line.png">
 </p>
 
-#### GBoost 
+#### Gradient Boosting 
 
 
 We obtained the following results for price prediction :
@@ -353,7 +353,7 @@ Thus we can see that that XGBoost was the best model for price predictions and G
 We applied the same models to see price and rating predictions for the following cities as well. 
 
 ### Amsterdam, Netherlands
-#### Gboost
+####  Gradient Boosting 
 We obtained the following results for price predictions:
 
 | Evaluation Method      | Value |
@@ -424,7 +424,7 @@ XGBoost performed better for price predictions compared to Gradient Boost for Am
 
 ### Hong Kong, China
 
-#### Gboost
+####  Gradient Boosting 
 We obtained the following results for price predictions:
 
 | Evaluation Method      | Value |
@@ -496,7 +496,7 @@ Gradient boost performed better than XGBoost for rating predictions.
 
 ### Bristol, United Kingdom
 
-#### Gboost
+####  Gradient Boosting 
 We obtained the following results for price predictions:
 
 | Evaluation Method      | Value |
