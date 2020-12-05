@@ -572,30 +572,30 @@ PCA (Principal Component Analysis) was run on the reduced features to abstract t
 
 sklearn.decomposition.PCA APIs performed the dimensionality reduction; internally, data is centered and SVD is applied.
 <p align="center">
-    <img src="kmeans_imgs/PCA.JPG">
+    <img float="left" height="250" width="400" src="kmeans_imgs/PCA.JPG">
 </p>
 
 Elbow Method and Silhouette Analysis were utilized to determine the optimal number of clusters. It is shown from the below views that 3 clusters would provide the such optimality. Observe, for instance, the "elbow" at k=3 with an SSE slightly under 39000. We can see from Silhouette Analysis one cluster tends to dominate, suggesting some similarity among listings that cannot be reduced. 
 
 sklearn.cluster.KMeans APIs performed the work of the underlying algorithm and utilize a slightly more advanced algorithm, k-means++.
 <p align="center">
-    <img src="kmeans_imgs/Elbow.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc1_kis2.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc1_kis3.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc1_kis4.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc1_kis5.JPG">
+    <img float="left" height="250" width="400" src="kmeans_imgs/Elbow.JPG">
+	<img height="250" width="400" src="kmeans_imgs/sc1_kis2.JPG">
+	<img height="250" width="400" src="kmeans_imgs/sc1_kis3.JPG">
+	<img height="250" width="400" src="kmeans_imgs/sc1_kis4.JPG">
+	<img height="250" width="400" src="kmeans_imgs/sc1_kis5.JPG">
 </p>
 
 The final K-Means data below is plotted in a more traditional format against the two PCA components.
 <p align="center">
-    <img src="kmeans_imgs/Scatter1.JPG">
+    <img float="left" height="250" width="400" src="kmeans_imgs/Scatter1.JPG">
 </p>
 
 It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map. We see similar listings spreead relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, most of Manhattan's northern strip falls under Cluster 2, as does much of Central Brooklyn and Queens. 
 <p align="center">
-    <img src="kmeans_imgs/Map.JPG">
+    <img float="left" height="350" width="500" src="kmeans_imgs/Map.JPG">
 </p>
 
 Finally, the exploratory analysis included running the PCA/K-Means clustering sequence on reduced features from the original input data, discarding those that had little effect on the variance (i.e. more similar, less relevant).
@@ -604,29 +604,39 @@ The features utilized in this reduced analysis were:
 PCA Analysis was run on the resultant features to abstract the most variance into fewer PCA components. 
 The histogram that plots the explained variance captured by each of PCA components. It is shown that the majority of the variance is captured by the first two components.
 <p align="center">
-    <img src="kmeans_imgs/Histogram2.JPG">
+    <img float="left" height="250" width="400" src="kmeans_imgs/Histogram2.JPG">
 </p>
 
 Elbow Method and Silhouette Analysis shows optimal number of clusters is again 3. Observe that the silhouette coefficient peaks at around 0.582 and SSE elbow is observed at SSE = 40000 for k=3.
 Note that dominance of one single cluster, suggesting irreducible similarity. 
 <p align="center">
-    <img src="kmeans_imgs/Elbow2.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc2_kis2.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc2_kis3.JPG">
-	<img height="300" width="300" src="kmeans_imgs/sc2_kis4.JPG">
+    <img float="left" height="250" width="400" src="kmeans_imgs/Elbow2.JPG">
+	<img float="left" height="250" width="400" src="kmeans_imgs/sc2_kis2.JPG">
+	<img float="left" height="250" width="400" src="kmeans_imgs/sc2_kis3.JPG">
+	<img float="left" height="250" width="400" src="kmeans_imgs/sc2_kis4.JPG">
 </p>
 
 The results of this exploratory analyis are shown, first plotted in a more traditional format against the two PCA components.
 <p align="center">
-    <img src="kmeans_imgs/Scatter2.JPG">
+    <img height="300" width="300" src="kmeans_imgs/Scatter2.JPG">
 </p>
 
-Thus, We see similar listings spreead relatively evenly across NYC. 
+This, we see similar listings spread relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
-    <img src="kmeans_imgs/Map2.JPG">
+    <img height="350" width="500" src="kmeans_imgs/Map2.JPG">
 </p>
+
+Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning.
+
+#### New York City, New York
+
+#### Amsterdam, Netherlands
+
+#### Hong Kong, China
+
+#### Bristol, United Kingdom
 
 ### Combining Supervised and Unsupervised Learning
 To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions worse. 
