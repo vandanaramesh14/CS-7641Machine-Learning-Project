@@ -5,7 +5,7 @@ Airbnb is an online marketplace that allows home-owners and renters (‘hosts’
 
 It is pretty important to get the Airbnb pricing right, especially in big cities around the world where competition is high and small differences in price can alter the popularity of a listing. It is necessary to find the appropriate pricing method and price range on a listing.
 
-Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around four cities such as , New York, Amsterdam, Bristol, and Hong Kong to be able to diversify our results for pricing and ratings. 
+Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around four cities such as, New York, Amsterdam, Bristol, and Hong Kong to be able to diversify our results for pricing and ratings. 
 
 ## Problem Definition
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
@@ -204,13 +204,14 @@ We used the following methods as part of our modelling process:
 	* Elbow Method
 	* NLP (i.e. Sentiment Analysis)
 	
-* Combining Supervised and Unsupervised Learning (tbd)
+* Combining Supervised and Unsupervised Learning 
+  * Combined XGBoost with K-Means - apply XGBoost model on each individual cluster for each city
 
-Our approach is innovative because we applied sentimental analysis on reviews to include predictions for price and rating, and we also applied regression models on each cluster in order to achieve better results. 
+Our approach is innovative because we applied sentiment analysis on reviews to include predictions for price and rating, and we also applied regression models on each cluster in order to achieve better results. 
 
 ## Results 
 ### Supervised Learning 
-A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentimental score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
+A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentiment score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
 
 We first implemented the models on only the New York City dataset and decided to pick the best model from our results in order to apply it on the other cities. 
 ### New York City
