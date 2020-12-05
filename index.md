@@ -207,7 +207,7 @@ We used the following methods as part of our modelling process:
 * Combining Supervised and Unsupervised Learning 
   * Combined XGBoost with K-Means - apply XGBoost model on each individual cluster for each city
 
-Our approach is innovative because we applied sentiment analysis on reviews to include predictions for price and rating, and we also applied regression models on each cluster in order to achieve better results. 
+Our approach is innovative because we applied sentiment analysis on reviews to include predictions for price and rating, and we also applied XGBoost models on each cluster in order to achieve better results. 
 
 ## Results 
 ### Supervised Learning 
