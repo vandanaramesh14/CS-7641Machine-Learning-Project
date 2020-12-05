@@ -363,7 +363,7 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" width ="1000"  />
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-2.png" />
@@ -379,7 +379,7 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-1.png" width ="1000" />
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-2.png" />
@@ -396,10 +396,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-1.png" width ="1000"  />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
