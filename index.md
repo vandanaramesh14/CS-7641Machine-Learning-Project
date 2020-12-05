@@ -11,7 +11,7 @@ Through our project, we plan to learn about the features that would contribute t
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
 
 ## Data Collection
-We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset.  
+We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset. (need to write here on number of records in each dataset we used and that we used three cities)
 
 ## Data Exploration 
 We started to explore the data for New York City alone for the midterm progress of the project. 
@@ -207,6 +207,8 @@ We used the following methods as part of our modelling process:
 ### Supervised Learning 
 A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentimental score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
 
+We first implemented the models on only the New York City dataset and decided to pick the best model from our results in order to apply it on the other cities. 
+### New York City
 #### Random Forest 
 
 
@@ -347,8 +349,78 @@ We obtained the following results for rating predictions :
   <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" />
 </p>
 
-Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions. 
+Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions for New York City. 
+We applied the same models to see price and rating predictions for the following cities as well. 
+### Amsterdam, Netherlands
+#### Gboost
+We obtained the following results for price predictions:
 
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |7357.9843|
+| Root Mean Square Error   |85.7786|
+| Mean Absolute Error | 44.271|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-2.png" />
+</p>
+
+We obtained the following results for rating predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |11.2184|
+| Root Mean Square Error   |3.3484|
+| Mean Absolute Error | 2.1047|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-2.png" />
+</p>
+
+#### XGBoost 
+We obtained the following results for price predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |7357.9843|
+| Root Mean Square Error   |85.7786|
+| Mean Absolute Error | 44.271|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-2.png" />
+</p>
+
+We obtained the following results for rating predictions:
+
+| Evaluation Method      | Value |
+| ----------- | ----------- |
+| Mean Square Error      |5755.6464|
+| Root Mean Square Error   |75.8685|
+| Mean Absolute Error | 42.8212|
+
+ 
+<p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-1.png" />
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-2.png" />
+</p>
+
+
+### Hong Kong, China
+### Bristol, United Kingdom
 ### Unsupervised Learning
 #### Clustering Analysis
 The bulk of mathematical analysis was performed using sklearn library imports.
