@@ -351,6 +351,7 @@ We obtained the following results for rating predictions :
 
 Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions for New York City. 
 We applied the same models to see price and rating predictions for the following cities as well. 
+
 ### Amsterdam, Netherlands
 #### Gboost
 We obtained the following results for price predictions:
@@ -418,6 +419,8 @@ We obtained the following results for rating predictions:
   <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-2.png" />
 </p>
 
+
+XGBoost performed better for price predictions compared to Gradient Boost for Amsterdam whereas both models performed very similarly for rating predictions. 
 
 ### Hong Kong, China
 
@@ -488,6 +491,8 @@ We obtained the following results for rating predictions:
 </p>
 
 
+Hong Kong did not give us satisfactory results for price predictions for these models. We believe this could be because ................
+Gradient boost performed better than XGBoost for rating predictions.
 
 ### Bristol, United Kingdom
 
@@ -557,6 +562,7 @@ We obtained the following results for rating predictions:
   <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" />
 </p>
 
+This dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
 
 ### Unsupervised Learning
 #### Clustering Analysis
