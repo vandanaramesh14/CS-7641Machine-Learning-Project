@@ -363,10 +363,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-1.png"/>
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-1.png"/>
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
@@ -379,10 +379,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-rating-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-rating-2.png" />
 </p>
 
 #### XGBoost 
@@ -396,10 +396,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-price-1.png"  />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-price-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-price-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
@@ -412,10 +412,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-xgboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-rating-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-2.png" />
 </p>
 
 
@@ -432,10 +432,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-price-gboost-1.png"/>
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-price-1.png"/>
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-price-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-price-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
@@ -448,10 +448,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-rating-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-rating-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-rating-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-rating-2.png" />
 </p>
 
 #### XGBoost 
@@ -465,10 +465,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-price-xgboost-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-price-1.png"  />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-price-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-price-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
@@ -481,10 +481,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-rating-xgboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-rating-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-rating-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-rating-2.png" />
 </p>
 
 
@@ -502,10 +502,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-price-gboost-1.png"/>
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-price-1.png"/>
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-price-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-price-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
@@ -518,10 +518,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-rating-gboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-rating-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-rating-gboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-rating-2.png" />
 </p>
 
 #### XGBoost 
@@ -535,10 +535,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-price-xgboost-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-price-1.png"  />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-price-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-price-2.png" />
 </p>
 
 We obtained the following results for rating predictions:
@@ -551,10 +551,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-rating-xgboost-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol--xgboost-rating-1.png" />
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-rating-xgboost-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" />
 </p>
 
 
