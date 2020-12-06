@@ -637,9 +637,9 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="200" width="300" float="left" src="gmm_imgs/nyc_sent_scatter.JPG">
 </p>
 <p align="left">
-    <img height="250" width="350" float="left" src="gmm_imgs/nyc_365_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/nyc_reviews_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/nyc_sent_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/nyc_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/nyc_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/nyc_sent_map.JPG">
 </p>
 
 #### Amsterdam, Netherlands
@@ -649,9 +649,9 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="200" width="300" float="left" src="gmm_imgs/amst_sent_scatter.JPG">
 </p>
 <p align="left">
-    <img height="250" width="350" float="left" src="gmm_imgs/amst_365_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/amst_reviews_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/amst_sent_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/amst_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/amst_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/amst_sent_map.JPG">
 </p>
 
 #### Hong Kong, China
@@ -661,9 +661,9 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="200" width="300" float="left" src="gmm_imgs/hk_sent_scatter.JPG">
 </p>
 <p align="left">
-    <img height="250" width="350" float="left" src="gmm_imgs/hk_365_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/hk_reviews_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/hk_sent_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/hk_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/hk_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
 </p>
 
 #### Bristol, United Kingdom
@@ -673,9 +673,9 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="200" width="300" float="left" src="gmm_imgs/bristol_sent_scatter.JPG">
 </p>
 <p align="left">
-    <img height="250" width="350" float="left" src="gmm_imgs/bristol_365_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/bristol_reviews_map.JPG">
-    <img height="250" width="350" float="left" src="gmm_imgs/bristol_sent_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
 </p>
 
 ### Combining Supervised and Unsupervised Learning
