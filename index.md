@@ -1,7 +1,5 @@
  <center> <h1>What Makes a Good Airbnb Listing? <br/>
 Airbnb Property Value and Demand </h1> 
-	</center>
-	<center>
  Project team: Haley Xue, Meghana Jain, Vandana Ramesh, Srikesh Srinivas, Ruiqi Zhu 
  </center>
 
