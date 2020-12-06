@@ -254,8 +254,8 @@ We obtained the following results for rating predictions :
 | Root Mean Square Error   | 5.5592  |
 | Mean Absolute Error |2.8132   |
 
-<p align ="center">
-	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="450" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="450"/>
+<p align ="left">
+	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="420" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="420"/>
 <!--   <img src="supervised_imgs/random forest/rf_rating_bar.png" />
  </p>
  <p align ="center">
