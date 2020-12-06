@@ -631,6 +631,14 @@ Note, howevever, that one can discern by portions of each region. For example, q
 Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning.
 
 #### New York City, New York
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_nyc_new_listings.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_nyc_new_listings.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_nyc_new_listings.JPG">
+</p>
+
+##### GMM Analysis
 <p align="left">
     <img height="200" width="300" float="left" src="gmm_imgs/nyc_365_scatter.JPG">
     <img height="200" width="300" float="left" src="gmm_imgs/nyc_reviews_scatter.JPG">
@@ -643,6 +651,14 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 </p>
 
 #### Amsterdam, Netherlands
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_amsterdam.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_amsterdam.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_amsterdam.JPG">
+</p>
+
+##### GMM Analysis
 <p align="left">
     <img height="200" width="300" float="left" src="gmm_imgs/amst_365_scatter.JPG">
     <img height="200" width="300" float="left" src="gmm_imgs/amst_reviews_scatter.JPG">
@@ -655,6 +671,14 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 </p>
 
 #### Hong Kong, China
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_hk.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_hk.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_hk.JPG">
+</p>
+
+##### GMM Analysis
 <p align="left">
     <img height="200" width="300" float="left" src="gmm_imgs/hk_365_scatter.JPG">
     <img height="200" width="300" float="left" src="gmm_imgs/hk_reviews_scatter.JPG">
@@ -667,6 +691,14 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 </p>
 
 #### Bristol, United Kingdom
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_bristol.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_bristol.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_bristol.JPG">
+</p>
+
+##### GMM Analysis
 <p align="left">
     <img height="200" width="300" float="left" src="gmm_imgs/bristol_365_scatter.JPG">
     <img height="200" width="300" float="left" src="gmm_imgs/bristol_reviews_scatter.JPG">
