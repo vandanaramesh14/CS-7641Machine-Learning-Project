@@ -9,7 +9,7 @@ Through our project, we plan to learn about the features that would contribute t
 
 ## Problem Definition
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
-(Need to say what is new in our approach) 
+
 
 ## Data Collection
 We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset. 
@@ -27,7 +27,7 @@ Dimensions of reviews.csv datasets:
 
 
 ## Data Exploration 
-We started to explore the data for New York City alone for the midterm progress of the project. 
+We performed data exploration on New York City data and it is as shown below
 
 ### Listings.csv
 In order to get a general understanding of the listings data, we generated some exploratory graphs to visualize patterns and groupings.  
@@ -200,7 +200,7 @@ For unsupervised learned, data from both csv files were needed. Sentiment analys
 We used the following methods as part of our modelling process:
 
 * Supervised Learning 
-	* Random Forest - We used a max depth of 20 in order to get the best results. 
+	* Random Forest - With max-depth of 20
 	* Gradient Boosting
 	* XGBoost
 	* Neural Networks - We used ‘Relu’ as the activation function for the first three layers, and then output one linear result for the last layer, as our predicted value is continuous. 
@@ -589,7 +589,7 @@ We obtained the following results for rating predictions:
   <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" width ="600">
 </p>
 
-Bristol dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
+Bristol dataset gave us the best results for price predictions. XGBoost performed better for price predictions and Gradient Boosting performed better for rating predictions, standing similar with results from NYC dataset. 
 
 ### Unsupervised Learning
 #### Clustering Analysis
@@ -766,13 +766,6 @@ To see if we could improve our model predictions for prices, we tried combining 
     <img src="xgboost_kmeans_results.png" width=400>
 </p>
 
-### Combining Supervised and Unsupervised Learning
-To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
-
-<p align="center">
-    <img src="xgboost_kmeans_results.png" width=400>
-</p>
-
 ## Discussion and future work
 
 * Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
@@ -781,7 +774,7 @@ To see if we could improve our model predictions for prices, we tried combining 
 
 ## Conclusion 
 * XGBoost and Gradient Boost models did well to predict price and ratings of airbnb listings. 
-*
+* GMM and K means ........
 
 ## References 
 
