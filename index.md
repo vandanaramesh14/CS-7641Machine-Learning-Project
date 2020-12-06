@@ -631,12 +631,52 @@ Note, howevever, that one can discern by portions of each region. For example, q
 Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning.
 
 #### New York City, New York
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/nyc_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/nyc_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/nyc_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="350" float="left" src="gmm_imgs/nyc_365_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/nyc_reviews_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/nyc_sent_map.JPG">
+</p>
 
 #### Amsterdam, Netherlands
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/amst_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/amst_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/amst_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="350" float="left" src="gmm_imgs/amst_365_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/amst_reviews_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/amst_sent_map.JPG">
+</p>
 
 #### Hong Kong, China
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/hk_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/hk_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/hk_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="350" float="left" src="gmm_imgs/hk_365_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/hk_reviews_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/hk_sent_map.JPG">
+</p>
 
 #### Bristol, United Kingdom
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/bristol_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/bristol_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/bristol_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="350" float="left" src="gmm_imgs/bristol_365_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/bristol_reviews_map.JPG">
+    <img height="250" width="350" float="left" src="gmm_imgs/bristol_sent_map.JPG">
+</p>
 
 ### Combining Supervised and Unsupervised Learning
 To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions worse. 
