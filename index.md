@@ -641,7 +641,7 @@ Note, howevever, that one can discern by portions of each region. For example, q
 </p>
 
 ### Combining Supervised and Unsupervised Learning
-To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
+To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
 
 <p align="center">
     <img src="xgboost_kmeans_results.png" width=400>
@@ -651,7 +651,7 @@ To see if we could improve our model predictions for prices, we tried combining 
 * We can see that ....
 * Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
 * It also does seem like datasets with smaller number of rows such as Bristol,England tends to perform too well and hence might be overfitting the supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
-
+* To reduce the prediction error of our model, one could also try splitting the listings into smaller subsets with different tiers of pricing. Different models may perform better on different subsets. In the case of the XGBoost model, this would also reduce the effect of conflicting data points. 
 
 ## References 
 
