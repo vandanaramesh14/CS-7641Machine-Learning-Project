@@ -238,11 +238,17 @@ We obtained the following results for price prediction :
 | Root Mean Square Error   | 95.01  |
 | Mean Absolute Error | 43.82    |
 
-<p align ="center">
-<img src="supervised_imgs/random forest/rf_price_bar.png" width="600">
+
+<p align="left">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
+</p>
+<p align ="left">
+<img src="supervised_imgs/random forest/rf_price_bar.png" width="400" height ="300" float = "left">
 	</p>
-	<p align ="center">
-	<img src="supervised_imgs/random forest/rf_price_line.png" margin-left="-100"  width="500">
+	<p align ="left">
+	<img src="supervised_imgs/random forest/rf_price_line.png" width="400" height ="300" float = "left">
 </p>
 
 	
