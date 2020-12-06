@@ -239,11 +239,10 @@ We obtained the following results for price prediction :
 | Mean Absolute Error | 43.82    |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_bar.png"/>
- </p>
- <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_line.png"/>
+<img src="supervised_imgs/random forest/rf_price_bar.png" width="420" hspace="5" /><img src="supervised_imgs/random forest/rf_price_line.png" width="420"/>
 </p>
+
+	
 
 We obtained the following results for rating predictions : 
 
@@ -256,7 +255,6 @@ We obtained the following results for rating predictions :
 
 <p align ="left">
 	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="420" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="420"/>
-
 </p>
 
 
