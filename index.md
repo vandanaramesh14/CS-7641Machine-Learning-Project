@@ -14,6 +14,12 @@ We plan to explore the pricing and rating predictions using supervised and unsup
 ## Data Collection
 We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset. (need to write here on number of records in each dataset we used and that we used three cities)
 
+Dimensions of reviews.csv datasets: 
+<p align="center">
+    <img src="sentiment_imgs/sentiment_rows_columns.png">
+</p>
+
+
 ## Data Exploration 
 We started to explore the data for New York City alone for the midterm progress of the project. 
 
