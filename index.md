@@ -269,13 +269,6 @@ We obtained the following results for rating predictions :
 
 
 
-<p align ="center">
-	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="600">
-	</p>
-	<p align = "center">
-	<img src="supervised_imgs/random forest/rf_rating_line.png" width="500">
-</p>
-
 
 #### Neural Networks 
 
