@@ -16,7 +16,7 @@ We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listin
 
 Dimensions of reviews.csv datasets: 
 <p align="center">
-    <img src="sentiment_imgs/sentiment_rows_columns.png" width="200">
+    <img src="sentiment_imgs/sentiment_rows_columns.png" width="400">
 </p>
 
 
