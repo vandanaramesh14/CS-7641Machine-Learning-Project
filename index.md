@@ -249,7 +249,7 @@ We obtained the following results for rating predictions :
 | Mean Absolute Error |2.8132   |
 
 <p align ="center">
-	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="400" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="400"/>
+	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="600" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="600"/>
 <!--   <img src="supervised_imgs/random forest/rf_rating_bar.png" />
  </p>
  <p align ="center">
@@ -381,6 +381,7 @@ We obtained the following results for price predictions:
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-2.png" />
+	
 </p>
 
 We obtained the following results for rating predictions:
