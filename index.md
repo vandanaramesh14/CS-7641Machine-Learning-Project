@@ -660,6 +660,8 @@ Note, howevever, that one can discern by portions of each region. For example, q
 
 Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning. Data was normalized to a Gaussian distribution using StandardScaler and GMM analysis was performed using sklearn.mixture.GaussianMixture import.
 
+Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA, Elbow Method, and Silhouette analysis was performed, identical to the original tests. Silhouette Analysis revealed coefficients in the 0.61-0.64 range for k=3, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. Sentiment analysis scores were utilized in the 2 PCA components.
+
 GMM analysis with PCA components too closely mirrored the original clusterings. So in order to obtain more valid analysis GMM simply ran between Price and another feature that provided meaningful representation. Price was compared against three features: 365 Day Room Availability, Number of Reviews per Month, and Average Sentiment Score (from previously discussed sentiment analysis). The rough equality of the components attests to the validity of the clusterings. The scatterplots and corresponding mappings are shown for each city below. 
 
 #### New York City, New York
@@ -670,7 +672,8 @@ GMM analysis with PCA components too closely mirrored the original clusterings. 
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_nyc_new_listings.JPG">
 </p>
 
-Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 80000 with k=3. Silhouette Analysis revealed a coefficient of 0.63, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 30000 NYC listings. Sentiment analysis scores were utilized in the 2 PCA components.
+The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 80000 with k=3. There were roughly 30000 NYC listings.
+
 
 ##### GMM Analysis
 <p align="left">
@@ -698,7 +701,7 @@ We also note from the two sentiment score visuals that even very cheap rooms som
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_amsterdam.JPG">
 </p>
 
-Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. Silhouette Analysis revealed a coefficient of 0.61, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 15000 Amsterdam listings. Sentiment analysis scores were utilized in the 2 PCA components.
+The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. There were roughly 15000 Amsterdam listings.
 
 ##### GMM Analysis
 <p align="left">
@@ -722,7 +725,8 @@ We can observe fromn this analysis that clusters are generally equal for all thr
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_hk.JPG">
 </p>
 
-Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. Silhouette Analysis revealed a coefficient of 0.64, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 3000 listings for Hong Kong. Sentiment analysis scores were utilized in the 2 PCA components.
+The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. There were roughly 3000 listings for Hong Kong. The clusters are generally distributed fairly equally across the city's constituencys.
+
 
 ##### GMM Analysis
 <p align="left">
@@ -746,7 +750,7 @@ We can observe from this analysis that clusters are generally equal for all thre
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_bristol.JPG">
 </p>
 
-Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. Silhouette Analysis revealed a coefficient of 0.64, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 1200 listings for Bristol. Sentiment analysis scores were utilized in the 2 PCA components. These clusters are generally distributed fairly equally across the city's constituency's.
+The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. There were roughly 1200 listings for Bristol. The clusters are generally distributed fairly equally across the city's constituencys.
 
 ##### GMM Analysis
 <p align="left">
