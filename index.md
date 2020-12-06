@@ -238,8 +238,15 @@ We obtained the following results for price prediction :
 | Root Mean Square Error   | 95.01  |
 | Mean Absolute Error | 43.82    |
 
-<p align ="left">
-<img src="supervised_imgs/random forest/rf_price_bar.png" width="450" hspace="5" /><img src="supervised_imgs/random forest/rf_price_line.png" width="450"/>
+
+<p align="left">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
+</p>
+<p align ="center">
+<img src="supervised_imgs/random forest/rf_price_bar.png" width="400" height ="250" float = "left">
+	<img src="supervised_imgs/random forest/rf_price_line.png" width="400" height ="250" float = "left">
 </p>
 
 	
@@ -253,8 +260,11 @@ We obtained the following results for rating predictions :
 | Root Mean Square Error   | 5.5592  |
 | Mean Absolute Error |2.8132   |
 
-<p align ="left">
-	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="450" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="450"/>
+<p align ="center">
+	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="600">
+	</p>
+	<p align = "center">
+	<img src="supervised_imgs/random forest/rf_rating_line.png" width="500">
 </p>
 
 
@@ -271,10 +281,10 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_price_bar.png"  />
+  <img src="supervised_imgs/neural network/nn_price_bar.png"  width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/neural network/nn_price_line.png" />
+  <img src="supervised_imgs/neural network/nn_price_line.png" width="500" >
 </p>
 
 We obtained the following results for rating predictions : 
@@ -287,10 +297,10 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_rating_bar.png"/>
+  <img src="supervised_imgs/neural network/nn_rating_bar.png" width="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/neural network/nn__rating_line.png">
+  <img src="supervised_imgs/neural network/nn__rating_line.png" width ="500">
 </p>
 
 #### Gradient Boosting 
@@ -306,10 +316,10 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png"  width ="1000" />
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-2.png"  width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/gboost-price-1.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions : 
@@ -322,10 +332,10 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png"  >
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png"/>
+  <img src="supervised_imgs/gboost and xgboost/gboost-rating-2.png" width ="500">
 </p>
 
 
@@ -341,10 +351,10 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png"  width ="1000" >
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-1.png"  width ="600" >
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png">
+  <img src="supervised_imgs/gboost and xgboost/xgboost-price-2.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions : 
@@ -357,10 +367,10 @@ We obtained the following results for rating predictions :
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" width ="500">
 </p>
 
 Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions for New York City. 
@@ -378,10 +388,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-1.png"/>
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-2.png" width ="500">
 	
 </p>
 
@@ -395,10 +405,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-rating-2.png" width ="500">
 </p>
 
 #### XGBoost 
@@ -412,10 +422,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-price-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-price-1.png"  width="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-price-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-price-2.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions:
@@ -428,10 +438,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/amsterdam-xgboost-rating-2.png" width ="500">
 </p>
 
 
@@ -450,10 +460,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-gboost-price-1.png"/>
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-price-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-gboost-price-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-price-2.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions:
@@ -466,10 +476,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-gboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-gboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-gboost-rating-2.png" width ="500">
 </p>
 
 #### XGBoost 
@@ -483,10 +493,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-price-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-price-1.png"  width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-price-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-price-2.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions:
@@ -499,10 +509,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/hk-xgboost-rating-2.png" width ="500">
 </p>
 
 
@@ -522,10 +532,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-price-1.png"/>
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-price-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-price-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-price-2.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions:
@@ -538,10 +548,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-gboost-rating-2.png" width ="500">
 </p>
 
 #### XGBoost 
@@ -555,10 +565,10 @@ We obtained the following results for price predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-price-1.png"  />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-price-1.png"  width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-price-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-price-2.png" width ="500">
 </p>
 
 We obtained the following results for rating predictions:
@@ -571,10 +581,10 @@ We obtained the following results for rating predictions:
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-1.png" width ="600">
   </p>
  <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" width ="500">
 </p>
 
 Bristol dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
