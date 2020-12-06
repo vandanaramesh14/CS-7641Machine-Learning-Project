@@ -563,8 +563,8 @@ We obtained the following results for rating predictions:
 | Evaluation Method      | Value |
 | ----------- | ----------- |
 | Mean Square Error      |2.2319|
-| Root Mean Square Error   |12.1816|
-| Mean Absolute Error | 2.2319|
+| Root Mean Square Error   |3.4902|
+| Mean Absolute Error | 2.1816| 
 
  
 <p align ="center">
