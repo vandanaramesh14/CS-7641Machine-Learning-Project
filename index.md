@@ -621,9 +621,9 @@ The final K-Means data below is plotted in a more traditional format against the
     <img height="250" width="350" float="left" src="kmeans_imgs/Scatter1.JPG">
 </p>
 
-It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map. We see similar listings spreead relatively evenly across NYC. 
+It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map. We see similar listings spread relatively evenly across NYC. 
 
-Note, howevever, that one can discern by portions of each region. For example, most of Manhattan's northern strip falls under Cluster 2, as does much of Central Brooklyn and Queens. 
+Note, however, that one can discern by portions of each region. For example, most of Manhattan's northern strip falls under Cluster 2, as does much of Central Brooklyn and Queens. 
 <p align="center">
     <img height="250" width="400" float="left" src="kmeans_imgs/Map.JPG">
 </p>
@@ -651,7 +651,7 @@ The results of this exploratory analyis are shown, first plotted in a more tradi
     <img height="250" width="250" float="left" src="kmeans_imgs/Scatter2.JPG">
 </p>
 
-Thus, We see similar listings spreead relatively evenly across NYC. 
+Thus, We see similar listings spread relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
@@ -660,7 +660,7 @@ Note, howevever, that one can discern by portions of each region. For example, q
 
 Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning. Data was normalized to a Gaussian distribution using StandardScaler and GMM analysis was performed using sklearn.mixture.GaussianMixture import.
 
-GMM analysis with PCA components too closely mirrored the original clusterings. So in order to obtain more valid analysis GMM simply ran between Price and another feature that provided meaningful representation. Price was compared against three features: 365 Day Room Availabbility, Number of Reviews per Month, and Average Sentiment Score (from previously discussed sentiment analysis). The rough equality of the components attests to the validity of the clusterings. The scatterplots and corresponding mappings are shown for each city below. 
+GMM analysis with PCA components too closely mirrored the original clusterings. So in order to obtain more valid analysis GMM simply ran between Price and another feature that provided meaningful representation. Price was compared against three features: 365 Day Room Availability, Number of Reviews per Month, and Average Sentiment Score (from previously discussed sentiment analysis). The rough equality of the components attests to the validity of the clusterings. The scatterplots and corresponding mappings are shown for each city below. 
 
 #### New York City, New York
 ##### K-Means Clustering (with Larger Dataset)
@@ -760,7 +760,7 @@ Further K-Means clustering was perfomed using the same listings dataset from sup
     <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
 </p>
 
-We again observe typically equal clusterings. The Price vs. Avg Sentiment Score visuals are informative here. Although component 1 dominates component 2 (light blue) only contains listings with high sentiment ratings (and slightly highly prices). This is useful for a buyer who want a high quality room irrespective of price. These clusters are generally distributed fairly equally across the city's constituency's.
+We again observe typically equal clusterings. The Price vs. Avg Sentiment Score visuals are informative here. Although component 1 dominates component 2 (light blue) only contains listings with high sentiment ratings (and slightly highly prices). This is useful for a buyer who want a high quality room irrespective of price. These clusters are generally distributed fairly equally across the city's constituencies.
 
 ### Combining Supervised and Unsupervised Learning
 To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
