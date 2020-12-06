@@ -1,4 +1,4 @@
- <center> <h1>What Makes a Good Airbnb Listing? <h1> <br/>
+ <center> <h1>What Makes a Good Airbnb Listing? <br/>
 Airbnb Property Value and Demand </h1> 
 	</center>
 	<center>
