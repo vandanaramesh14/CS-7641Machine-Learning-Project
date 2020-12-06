@@ -637,12 +637,14 @@ The results of this exploratory analyis are shown, first plotted in a more tradi
 
 Thus, We see similar listings spreead relatively evenly across NYC. 
 
-Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
+Note, however, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
-    <img height="250" width="250" float="left" src="kmeans_imgs/Map2.JPG">
+    <img height="250" width="400" float="left" src="kmeans_imgs/Map2.JPG">
 </p>
 
-Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning.
+Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning. Data was normalizes to a Gaussian distribution using StandardScaler and GMM analysis was performed using sklearn.mixture.GaussianMixture import.
+
+GMM analysis with PCA components too closely mirrored the original clusterings. So in order to obtain more valid analysis GMM simply ran between Price and another feature that provided meaningful representation. Price was compared against three features: 365 Day Room Availabbility, Number of Reviews per Month, and Average Sentiment Score (from previously discussed sentiment analysis). The rough equality of the components attests to the validity of the clusterings. The scatterplots and corresponding mappings are shown for each city below. 
 
 #### New York City, New York
 ##### K-Means Clustering (with Larger Dataset)
@@ -651,6 +653,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_nyc_new_listings.JPG">
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_nyc_new_listings.JPG">
 </p>
+
+Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 80000 with k=3. Silhouette Analysis revealed a coefficient of 0.63, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 30000 NYC listings. Sentiment analysis scores were utilized in the 2 PCA components.
 
 ##### GMM Analysis
 <p align="left">
@@ -664,6 +668,12 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="250" width="400" float="left" src="gmm_imgs/nyc_sent_map.JPG">
 </p>
 
+We can observe from the Price vs. 365-Availability visuals that more expensive rooms have longer annual availability. As evidenced by the first two cluster scheaper and more short-term rooms are congregated in the north side of NYC; the final cluster is dominant in the southern half of the city and represent the popularity of more expensive and long-term rooms.
+
+We can see from the Price vs. Reviews per Month visuals that rooms with more reviews tend to be congregated in the northern half of the city, possibly because of higher tourism or population, and pricier, less reviewed rooms are in the south side. Notice the lesser frequency of these rooms, as they are luxury condiments.
+
+We also note from the two sentiment score visuals that even very cheap rooms sometimes get good average ratings.
+
 #### Amsterdam, Netherlands
 ##### K-Means Clustering (with Larger Dataset)
 <p align="left">
@@ -671,6 +681,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_amsterdam.JPG">
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_amsterdam.JPG">
 </p>
+
+Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. Silhouette Analysis revealed a coefficient of 0.61, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 15000 Amsterdam listings. Sentiment analysis scores were utilized in the 2 PCA components.
 
 ##### GMM Analysis
 <p align="left">
@@ -684,6 +696,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="250" width="400" float="left" src="gmm_imgs/amst_sent_map.JPG">
 </p>
 
+We can observe fromn this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. Reviews per month visuals are generally dominated by one component, indicating their independence of price. Rooms of all prices had highest sentiment ratings, as evidenced by Component 2 (red cluster) in the Price vs. Avg Sentiment Score City Map.
+
 #### Hong Kong, China
 ##### K-Means Clustering (with Larger Dataset)
 <p align="left">
@@ -691,6 +705,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_hk.JPG">
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_hk.JPG">
 </p>
+
+Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. Silhouette Analysis revealed a coefficient of 0.64, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 3000 listings for Hong Kong. Sentiment analysis scores were utilized in the 2 PCA components.
 
 ##### GMM Analysis
 <p align="left">
@@ -704,6 +720,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
 </p>
 
+We can observe fromn this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituency's.
+
 #### Bristol, United Kingdom
 ##### K-Means Clustering (with Larger Dataset)
 <p align="left">
@@ -711,6 +729,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_bristol.JPG">
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_bristol.JPG">
 </p>
+
+Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. Silhouette Analysis revealed a coefficient of 0.64, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 1200 listings for Bristol. Sentiment analysis scores were utilized in the 2 PCA components. These clusters are generally distributed fairly equally across the city's constituency's.
 
 ##### GMM Analysis
 <p align="left">
@@ -724,6 +744,8 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
     <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
 </p>
 
+We again obsberve typically equal clusterings. The Price vs. Avg Sentiment Score visuals are informative here. Although component 1 dominates component 2 (light blue) only contains listings with high sentiment ratings (and slightly highly prices). This is useful for a buyer who want a high quality room irrespective of price. These clusters are generally distributed fairly equally across the city's constituency's.
+
 ### Combining Supervised and Unsupervised Learning
 To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
 
@@ -736,7 +758,7 @@ To see if we could improve our model predictions for prices, we tried combining 
 * Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
 * It also does seem like datasets with smaller number of rows such as Bristol,England tends to perform too well and hence might be overfitting the supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
 * To reduce the prediction error of our model, one could also try splitting the listings into smaller subsets with different tiers of pricing. Different models may perform better on different subsets. In the case of the XGBoost model, this would also reduce the effect of conflicting data points. 
-
+* K-Means Clusterings and GMM component analysis provide informative visuals to deduce how a buyer can best categorize listings; for example, if a cluster or component is congregated in Manhattan, we can inference something about Manhattan listings. In GMM analysis we observed that south NYC listings generally are more expensive and have on average higher sentiment scores. In the future, these clusterings and components could be utilized in supervised learning models (not only regression) as input features.
 ## Conclusion 
 * XGBoost and Gradient Boost models did well to predict price and ratings of airbnb listings. 
 *
