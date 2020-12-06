@@ -242,8 +242,7 @@ We obtained the following results for price prediction :
 <img src="supervised_imgs/random forest/rf_price_bar.png" width="600">
 	</p>
 	<p align ="center">
-	.ml-n20
-	<img src="supervised_imgs/random forest/rf_price_line.png" width="500">
+	<img src="supervised_imgs/random forest/rf_price_line.png" margin-left="-100"  width="500">
 </p>
 
 	
