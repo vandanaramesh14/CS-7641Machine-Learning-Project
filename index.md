@@ -238,7 +238,7 @@ We obtained the following results for price prediction :
 | Root Mean Square Error   | 95.01  |
 | Mean Absolute Error | 43.82    |
 
-<p align ="right">
+<p align ="left">
 <img src="supervised_imgs/random forest/rf_price_bar.png" width="450" hspace="5" /><img src="supervised_imgs/random forest/rf_price_line.png" width="450"/>
 </p>
 
