@@ -740,7 +740,7 @@ The histogram shows the z-space component explained variance and the line chart 
     <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
 </p>
 
-We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituency's.
+We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituencies.
 
 #### Bristol, United Kingdom
 ##### K-Means Clustering (with Larger Dataset)
