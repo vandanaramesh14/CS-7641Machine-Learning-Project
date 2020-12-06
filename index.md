@@ -736,7 +736,7 @@ Further K-Means clustering was perfomed using the same listings dataset from sup
     <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
 </p>
 
-We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituency's.
+We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituencies.
 
 #### Bristol, United Kingdom
 ##### K-Means Clustering (with Larger Dataset)
@@ -746,7 +746,7 @@ We can observe from this analysis that clusters are generally equal for all thre
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_bristol.JPG">
 </p>
 
-Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. Silhouette Analysis revealed a coefficient of 0.64, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 1200 listings for Bristol. Sentiment analysis scores were utilized in the 2 PCA components. These clusters are generally distributed fairly equally across the city's constituency's.
+Further K-Means clustering was perfomed using the same listings dataset from supervised learning. PCA and Elbow Method analysis was performed, identical to the original tests. The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. Silhouette Analysis revealed a coefficient of 0.64, but is not shown here for the sake of brevity. Regression (e.g. XGBoost) was run on these new clusters in order to generate different findings. The equality of each cluster also attests to the accuracy of the clusterings. There were roughly 1200 listings for Bristol. Sentiment analysis scores were utilized in the 2 PCA components. These clusters are generally distributed fairly equally across the city's constituencies.
 
 ##### GMM Analysis
 <p align="left">
