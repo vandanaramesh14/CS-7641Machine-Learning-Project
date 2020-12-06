@@ -375,7 +375,7 @@ We obtained the following results for rating predictions :
   <img src="supervised_imgs/gboost and xgboost/xgboost-rating-2.png" width ="600">
 </p>
 
-Thus we can see that that XGBoost was the best model for price predictions and GBoost was the best model for rating predictions for New York City. 
+Thus we can see that that XGBoost was the best model for price predictions and Gradient Boosting was the best model for rating predictions for New York City. 
 We applied the same models to see price and rating predictions for the following cities as well. 
 
 ### Amsterdam, Netherlands
