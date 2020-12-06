@@ -503,7 +503,7 @@ We obtained the following results for rating predictions:
 </p>
 
 
-Hong Kong did not give us satisfactory results for price predictions for these models. We believe this could be because ................
+Hong Kong did not give us satisfactory results for price predictions for these models. We believe this could be because our dataset having a small number of rows after cleaning, because we dropped quite a lot of rows having non-english reviews. 
 Gradient boosting performed better than XGBoost for rating predictions.
 
 ### Bristol, United Kingdom
