@@ -658,7 +658,7 @@ Note, howevever, that one can discern by portions of each region. For example, q
     <img height="250" width="400" float="left" src="kmeans_imgs/Map2.JPG">
 </p>
 
-Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning. Data was normalizes to a Gaussian distribution using StandardScaler and GMM analysis was performed using sklearn.mixture.GaussianMixture import.
+Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning. Data was normalized to a Gaussian distribution using StandardScaler and GMM analysis was performed using sklearn.mixture.GaussianMixture import.
 
 GMM analysis with PCA components too closely mirrored the original clusterings. So in order to obtain more valid analysis GMM simply ran between Price and another feature that provided meaningful representation. Price was compared against three features: 365 Day Room Availabbility, Number of Reviews per Month, and Average Sentiment Score (from previously discussed sentiment analysis). The rough equality of the components attests to the validity of the clusterings. The scatterplots and corresponding mappings are shown for each city below. 
 
@@ -736,7 +736,7 @@ Further K-Means clustering was perfomed using the same listings dataset from sup
     <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
 </p>
 
-We can observe fromn this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituency's.
+We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituency's.
 
 #### Bristol, United Kingdom
 ##### K-Means Clustering (with Larger Dataset)
@@ -777,7 +777,8 @@ To see if we could improve our model predictions for prices, we tried combining 
 
 ## Conclusion 
 * XGBoost and Gradient Boost models did well to predict price and ratings of airbnb listings. 
-* GMM and K means ........
+* Sentiment analysis was incorporated in K-Means and GMM to provide valid and equal clusterings; when plotted on city maps, these clusterings revealed informative insights about listings in the particular city.
+
 
 ## References 
 
