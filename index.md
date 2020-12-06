@@ -238,12 +238,14 @@ We obtained the following results for price prediction :
 | Root Mean Square Error   | 95.01  |
 | Mean Absolute Error | 43.82    |
 
+
 <p align ="center">
-<img src="supervised_imgs/random forest/rf_price_bar.png" width="600">
-	</p>
-	<p align = "center">
-	<img src="supervised_imgs/random forest/rf_price_line.png" width="500">
+  <img src="supervised_imgs/random forest/rf_price_bar.png" width="600">
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/random forest/rf_price_line.png" width ="500">
 </p>
+
 
 	
 
@@ -255,6 +257,17 @@ We obtained the following results for rating predictions :
 | Mean Square Error      | 30.905|
 | Root Mean Square Error   | 5.5592  |
 | Mean Absolute Error |2.8132   |
+
+
+
+<p align ="center">
+  <img src="supervised_imgs/random forest/rf_rating_bar.png" width="600">
+  </p>
+ <p align ="center">
+  <img src="supervised_imgs/random forest/rf_rating_line.png" width ="500">
+</p>
+
+
 
 <p align ="center">
 	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="600">
