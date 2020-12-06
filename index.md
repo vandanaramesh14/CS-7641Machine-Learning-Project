@@ -653,7 +653,7 @@ The results of this exploratory analyis are shown, first plotted in a more tradi
 
 Thus, We see similar listings spread relatively evenly across NYC. 
 
-Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
+Note, however, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
     <img height="250" width="400" float="left" src="kmeans_imgs/Map2.JPG">
 </p>
