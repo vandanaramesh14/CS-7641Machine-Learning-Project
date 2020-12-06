@@ -5,13 +5,20 @@ Airbnb is an online marketplace that allows home-owners and renters (‘hosts’
 
 It is pretty important to get the Airbnb pricing right, especially in big cities around the world where competition is high and small differences in price can alter the popularity of a listing. It is necessary to find the appropriate pricing method and price range on a listing.
 
-Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around five cities such as , New York, Boston, Amsterdam, Berlin, and Hong Kong to be able to diversify our results for pricing and ratings. 
+Through our project, we plan to learn about the features that would contribute to the price of an Airbnb listing along with the features which would contribute to a higher rating for the listing. We plan to investigate the data of around four cities such as, New York, Amsterdam, Bristol, and Hong Kong to be able to diversify our results for pricing and ratings. 
 
 ## Problem Definition
 We plan to explore the pricing and rating predictions using supervised and unsupervised machine learning techniques. Through supervised learning, we would like to predict the price and rating of an Airbnb listing. Through unsupervised learning, we would like to cluster similar listings based on chosen attributes and cluster listings based on reviews. We plan to integrate the supervised and unsupervised results by comparing model results on the entire listings data set with the results of applying our models to each cluster separately. The intuition behind this approach is that applying our models on similar listings will reduce noise and lead to more accurate price predictions. 
+(Need to say what is new in our approach) 
 
 ## Data Collection
 We obtained our data from Inside Airbnb[1], a website that scrapes Airbnb listings, reviews, and calendar data from multiple cities around the world.  The listings dataset for each city contains listings details (room types, prices, availabilities, host ids and names, average reviews per month, etc.), and neighborhood information. It also includes geographic information which can be used to produce map visualizations. The reviews dataset contains reviews and comments about each Airbnb listing present in the listings dataset. (need to write here on number of records in each dataset we used and that we used three cities)
+
+Dimensions of reviews.csv datasets: 
+<p align="center">
+    <img src="sentiment_imgs/sentiment_rows_columns.png" width="300">
+</p>
+
 
 ## Data Exploration 
 We started to explore the data for New York City alone for the midterm progress of the project. 
@@ -202,10 +209,15 @@ We used the following methods as part of our modelling process:
 	* Silhouette Analysis
 	* Elbow Method
 	* NLP (i.e. Sentiment Analysis)
+	
+* Combining Supervised and Unsupervised Learning 
+  * Combined XGBoost with K-Means - apply XGBoost model on each individual cluster for each city
+
+Our approach is innovative because we applied sentiment analysis on reviews to include predictions for price and rating, and we also applied XGBoost models on each cluster in order to achieve better results. 
 
 ## Results 
 ### Supervised Learning 
-A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentimental score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
+A train test split was performed with a test size of 0.2. We used MSE, MAE and RMSE to evaluate our models. Using the features in listings and the sentiment score of comments from reviews, for both price and ratings, happened to give us better results for our models than using just the features in Listings. Thus, all our results below are based on that. 
 
 We first implemented the models on only the New York City dataset and decided to pick the best model from our results in order to apply it on the other cities. 
 ### New York City
@@ -221,7 +233,7 @@ We obtained the following results for price prediction :
 | Mean Absolute Error | 43.82    |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_price_bar.png" width ="1000"/>
+  <img src="supervised_imgs/random forest/rf_price_bar.png"/>
  </p>
  <p align ="center">
   <img src="supervised_imgs/random forest/rf_price_line.png"/>
@@ -237,10 +249,11 @@ We obtained the following results for rating predictions :
 | Mean Absolute Error |2.8132   |
 
 <p align ="center">
-  <img src="supervised_imgs/random forest/rf_rating_bar.png" />
+	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="500" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="500"/>
+<!--   <img src="supervised_imgs/random forest/rf_rating_bar.png" />
  </p>
  <p align ="center">
-  <img src="supervised_imgs/random forest/rf_rating_line.png"/>
+  <img src="supervised_imgs/random forest/rf_rating_line.png"/> -->
 </p>
 
 
@@ -257,7 +270,7 @@ We obtained the following results for price prediction :
 
  
 <p align ="center">
-  <img src="supervised_imgs/neural network/nn_price_bar.png"  width ="1000" />
+  <img src="supervised_imgs/neural network/nn_price_bar.png"  />
   </p>
  <p align ="center">
   <img src="supervised_imgs/neural network/nn_price_line.png" />
@@ -368,6 +381,7 @@ We obtained the following results for price predictions:
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/amsterdam-gboost-price-2.png" />
+	
 </p>
 
 We obtained the following results for rating predictions:
@@ -420,7 +434,7 @@ We obtained the following results for rating predictions:
 </p>
 
 
-XGBoost performed better for price predictions compared to Gradient Boost for Amsterdam whereas both models performed very similarly for rating predictions. 
+For Amsterdam, XGBoost performed better for price predictions compared to Gradient Boost for Amsterdam whereas both models performed very similarly for rating predictions. 
 
 ### Hong Kong, China
 
@@ -491,8 +505,8 @@ We obtained the following results for rating predictions:
 </p>
 
 
-Hong Kong did not give us satisfactory results for price predictions for these models. We believe this could be because ................
-Gradient boost performed better than XGBoost for rating predictions.
+Hong Kong did not give us satisfactory results for price predictions for these models. We believe this could be because our dataset having a small number of rows after cleaning, because we dropped quite a lot of rows having non-english reviews. 
+Gradient boosting performed better than XGBoost for rating predictions.
 
 ### Bristol, United Kingdom
 
@@ -551,18 +565,18 @@ We obtained the following results for rating predictions:
 | Evaluation Method      | Value |
 | ----------- | ----------- |
 | Mean Square Error      |2.2319|
-| Root Mean Square Error   |12.1816|
-| Mean Absolute Error | 2.2319|
+| Root Mean Square Error   |3.4902|
+| Mean Absolute Error | 2.1816| 
 
  
 <p align ="center">
-  <img src="supervised_imgs/gboost and xgboost/bristol--xgboost-rating-1.png" />
+  <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-1.png" />
   </p>
  <p align ="center">
   <img src="supervised_imgs/gboost and xgboost/bristol-xgboost-rating-2.png" />
 </p>
 
-This dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
+Bristol dataset gave us the best results for price predictions. XGBoost performed better for price predictions and GBoost performed better for rating predictions, standing similar with results from NYC dataset. 
 
 ### Unsupervised Learning
 #### Clustering Analysis
@@ -572,30 +586,30 @@ PCA (Principal Component Analysis) was run on the reduced features to abstract t
 
 sklearn.decomposition.PCA APIs performed the dimensionality reduction; internally, data is centered and SVD is applied.
 <p align="center">
-    <img float="left" height="250" width="400" src="kmeans_imgs/PCA.JPG">
+    <img height="250" width="350" float="left" src="kmeans_imgs/PCA.JPG">
 </p>
 
 Elbow Method and Silhouette Analysis were utilized to determine the optimal number of clusters. It is shown from the below views that 3 clusters would provide the such optimality. Observe, for instance, the "elbow" at k=3 with an SSE slightly under 39000. We can see from Silhouette Analysis one cluster tends to dominate, suggesting some similarity among listings that cannot be reduced. 
 
 sklearn.cluster.KMeans APIs performed the work of the underlying algorithm and utilize a slightly more advanced algorithm, k-means++.
-<p align="center">
-    <img float="left" height="250" width="400" src="kmeans_imgs/Elbow.JPG">
-	<img height="250" width="400" src="kmeans_imgs/sc1_kis2.JPG">
-	<img height="250" width="400" src="kmeans_imgs/sc1_kis3.JPG">
-	<img height="250" width="400" src="kmeans_imgs/sc1_kis4.JPG">
-	<img height="250" width="400" src="kmeans_imgs/sc1_kis5.JPG">
+<p align="left">
+    <img height="200" width="350" float="left" src="kmeans_imgs/Elbow.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis2.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis3.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis4.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis5.JPG">
 </p>
 
 The final K-Means data below is plotted in a more traditional format against the two PCA components.
 <p align="center">
-    <img float="left" height="250" width="400" src="kmeans_imgs/Scatter1.JPG">
+    <img height="250" width="350" float="left" src="kmeans_imgs/Scatter1.JPG">
 </p>
 
 It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map. We see similar listings spreead relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, most of Manhattan's northern strip falls under Cluster 2, as does much of Central Brooklyn and Queens. 
 <p align="center">
-    <img float="left" height="350" width="500" src="kmeans_imgs/Map.JPG">
+    <img height="250" width="400" float="left" src="kmeans_imgs/Map.JPG">
 </p>
 
 Finally, the exploratory analysis included running the PCA/K-Means clustering sequence on reduced features from the original input data, discarding those that had little effect on the variance (i.e. more similar, less relevant).
@@ -604,28 +618,28 @@ The features utilized in this reduced analysis were:
 PCA Analysis was run on the resultant features to abstract the most variance into fewer PCA components. 
 The histogram that plots the explained variance captured by each of PCA components. It is shown that the majority of the variance is captured by the first two components.
 <p align="center">
-    <img float="left" height="250" width="400" src="kmeans_imgs/Histogram2.JPG">
+    <img height="250" width="350" float="left" src="kmeans_imgs/Histogram2.JPG">
 </p>
 
 Elbow Method and Silhouette Analysis shows optimal number of clusters is again 3. Observe that the silhouette coefficient peaks at around 0.582 and SSE elbow is observed at SSE = 40000 for k=3.
 Note that dominance of one single cluster, suggesting irreducible similarity. 
 <p align="center">
-    <img float="left" height="250" width="400" src="kmeans_imgs/Elbow2.JPG">
-	<img float="left" height="250" width="400" src="kmeans_imgs/sc2_kis2.JPG">
-	<img float="left" height="250" width="400" src="kmeans_imgs/sc2_kis3.JPG">
-	<img float="left" height="250" width="400" src="kmeans_imgs/sc2_kis4.JPG">
+    <img height="200" width="350" float="left" src="kmeans_imgs/Elbow2.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc2_kis2.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc2_kis3.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc2_kis4.JPG">
 </p>
 
 The results of this exploratory analyis are shown, first plotted in a more traditional format against the two PCA components.
 <p align="center">
-    <img height="300" width="300" src="kmeans_imgs/Scatter2.JPG">
+    <img height="250" width="250" float="left" src="kmeans_imgs/Scatter2.JPG">
 </p>
 
-This, we see similar listings spread relatively evenly across NYC. 
+Thus, We see similar listings spreead relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
-    <img height="350" width="500" src="kmeans_imgs/Map2.JPG">
+    <img height="250" width="250" float="left" src="kmeans_imgs/Map2.JPG">
 </p>
 
 Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning.
@@ -711,17 +725,21 @@ Subsequent analysis involved K-Means and GMM modelling using the supervised lear
 </p>
 
 ### Combining Supervised and Unsupervised Learning
-To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of the features may start to conflict which each other and make predictions worse. 
+To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
 
 <p align="center">
     <img src="xgboost_kmeans_results.png" width=400>
 </p>
 
 ## Discussion and future work
-* We plan to perform further cluster analysis using GMM and see if that provides us with better results.
-We will cluster by only one feature (e.g room type), as well as different combination of features.
-* Next steps include combining the clustering with the XGboost and Gboost models and compare. We anticipate the models applied to each cluster will be more accurate than applying to entire listings data.
-* We plan to obtain results for three cities and try to figure out the geographic distributions of Airbnb listings. 
+
+* Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
+* It also does seem like datasets with smaller number of rows such as Bristol,England tends to perform too well and hence might be overfitting the supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
+* To reduce the prediction error of our model, one could also try splitting the listings into smaller subsets with different tiers of pricing. Different models may perform better on different subsets. In the case of the XGBoost model, this would also reduce the effect of conflicting data points. 
+
+## Conclusion 
+* XGBoost and Gradient Boost models did well to predict price and ratings of airbnb listings. 
+*
 
 ## References 
 
