@@ -592,30 +592,30 @@ PCA (Principal Component Analysis) was run on the reduced features to abstract t
 
 sklearn.decomposition.PCA APIs performed the dimensionality reduction; internally, data is centered and SVD is applied.
 <p align="center">
-    <img src="kmeans_imgs/PCA.JPG">
+    <img height="250" width="350" float="left" src="kmeans_imgs/PCA.JPG">
 </p>
 
 Elbow Method and Silhouette Analysis were utilized to determine the optimal number of clusters. It is shown from the below views that 3 clusters would provide the such optimality. Observe, for instance, the "elbow" at k=3 with an SSE slightly under 39000. We can see from Silhouette Analysis one cluster tends to dominate, suggesting some similarity among listings that cannot be reduced. 
 
 sklearn.cluster.KMeans APIs performed the work of the underlying algorithm and utilize a slightly more advanced algorithm, k-means++.
 <p align="center">
-    <img src="kmeans_imgs/Elbow.JPG">
-	<img src="kmeans_imgs/sc1_kis2.JPG">
-	<img src="kmeans_imgs/sc1_kis3.JPG">
-	<img src="kmeans_imgs/sc1_kis4.JPG">
-	<img src="kmeans_imgs/sc1_kis5.JPG">
+    <img height="200" width="350" float="left" src="kmeans_imgs/Elbow.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis2.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis3.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis4.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis5.JPG">
 </p>
 
 The final K-Means data below is plotted in a more traditional format against the two PCA components.
 <p align="center">
-    <img src="kmeans_imgs/Scatter1.JPG">
+    <img height="250" width="350" float="left" src="kmeans_imgs/Scatter1.JPG">
 </p>
 
 It is also presented on the map of NYC to present data in a more visually relevant format. Map displays locations of listings by cluster. GeoPandas package was utilized for this map. We see similar listings spreead relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, most of Manhattan's northern strip falls under Cluster 2, as does much of Central Brooklyn and Queens. 
 <p align="center">
-    <img src="kmeans_imgs/Map.JPG">
+    <img height="250" width="400" float="left" src="kmeans_imgs/Map.JPG">
 </p>
 
 Finally, the exploratory analysis included running the PCA/K-Means clustering sequence on reduced features from the original input data, discarding those that had little effect on the variance (i.e. more similar, less relevant).
@@ -624,28 +624,110 @@ The features utilized in this reduced analysis were:
 PCA Analysis was run on the resultant features to abstract the most variance into fewer PCA components. 
 The histogram that plots the explained variance captured by each of PCA components. It is shown that the majority of the variance is captured by the first two components.
 <p align="center">
-    <img src="kmeans_imgs/Histogram2.JPG">
+    <img height="250" width="350" float="left" src="kmeans_imgs/Histogram2.JPG">
 </p>
 
 Elbow Method and Silhouette Analysis shows optimal number of clusters is again 3. Observe that the silhouette coefficient peaks at around 0.582 and SSE elbow is observed at SSE = 40000 for k=3.
 Note that dominance of one single cluster, suggesting irreducible similarity. 
 <p align="center">
-    <img src="kmeans_imgs/Elbow2.JPG">
-	<img src="kmeans_imgs/sc2_kis2.JPG">
-	<img src="kmeans_imgs/sc2_kis3.JPG">
-	<img src="kmeans_imgs/sc2_kis4.JPG">
+    <img height="200" width="350" float="left" src="kmeans_imgs/Elbow2.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc2_kis2.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc2_kis3.JPG">
+	<img height="200" width="300" float="left" src="kmeans_imgs/sc2_kis4.JPG">
 </p>
 
 The results of this exploratory analyis are shown, first plotted in a more traditional format against the two PCA components.
 <p align="center">
-    <img src="kmeans_imgs/Scatter2.JPG">
+    <img height="250" width="250" float="left" src="kmeans_imgs/Scatter2.JPG">
 </p>
 
 Thus, We see similar listings spreead relatively evenly across NYC. 
 
 Note, howevever, that one can discern by portions of each region. For example, quite a bit of East Manhattan falls under Cluster 2, as does much of Northern Queens. 
 <p align="center">
-    <img src="kmeans_imgs/Map2.JPG">
+    <img height="250" width="250" float="left" src="kmeans_imgs/Map2.JPG">
+</p>
+
+Subsequent analysis involved K-Means and GMM modelling using the supervised learning datasets (i.e. incorporated more calculated features). This analysis was performed four the same four cities as supervised learning.
+
+#### New York City, New York
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_nyc_new_listings.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_nyc_new_listings.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_nyc_new_listings.JPG">
+</p>
+
+##### GMM Analysis
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/nyc_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/nyc_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/nyc_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="400" float="left" src="gmm_imgs/nyc_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/nyc_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/nyc_sent_map.JPG">
+</p>
+
+#### Amsterdam, Netherlands
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_amsterdam.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_amsterdam.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_amsterdam.JPG">
+</p>
+
+##### GMM Analysis
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/amst_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/amst_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/amst_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="400" float="left" src="gmm_imgs/amst_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/amst_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/amst_sent_map.JPG">
+</p>
+
+#### Hong Kong, China
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_hk.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_hk.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_hk.JPG">
+</p>
+
+##### GMM Analysis
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/hk_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/hk_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/hk_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="400" float="left" src="gmm_imgs/hk_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/hk_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
+</p>
+
+#### Bristol, United Kingdom
+##### K-Means Clustering (with Larger Dataset)
+<p align="left">
+	<img height="250" width="250" float="left" src="kmeans_all_cities_imgs/pca_bristol.JPG">
+	<img height="250" width="400" float="left" src="kmeans_all_cities_imgs/elbow_bristol.JPG">
+    <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_bristol.JPG">
+</p>
+
+##### GMM Analysis
+<p align="left">
+    <img height="200" width="300" float="left" src="gmm_imgs/bristol_365_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/bristol_reviews_scatter.JPG">
+    <img height="200" width="300" float="left" src="gmm_imgs/bristol_sent_scatter.JPG">
+</p>
+<p align="left">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_365_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_reviews_map.JPG">
+    <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
 </p>
 
 ### Combining Supervised and Unsupervised Learning
