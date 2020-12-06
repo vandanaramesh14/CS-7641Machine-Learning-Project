@@ -30,7 +30,7 @@ Dimensions of reviews.csv datasets:
 
 
 ## Data Exploration 
-We performed data exploration on New York City data and it is as shown below
+We performed data exploration on New York City data and it is as shown below.
 
 ### Listings.csv
 In order to get a general understanding of the listings data, we generated some exploratory graphs to visualize patterns and groupings.  
@@ -100,16 +100,16 @@ We used XGboost Regressor to determine the important features amongst the vast a
 
 * Dropped the non-important columns : 
 
-The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc as it was shown to be not meaningful to determining price and rating. 
+The above graph shows us the most important columns affecting price and rating. Thus, in order to narrow down our features, we removed other unnecessary columns such as URLs, images, and scraping date, host pictures, etc. as they were shown to be not meaningful in determining price and ratings. 
 
 * Amenities Column : 
 
-We converted the list of amenities into the length of the list. In other words, we look at how many amenities the listing provides. 
+We converted the list of amenities into the length of the list. In other words, we looked at how many amenities each listing provides. 
 
 * Neighborhood Overview Column : 
 
 We used Tourist Attractions in NYC [3] containing all the tourist attractions in NYC to be able to make sense of the neighborhood overview column.  We converted the neighborhood_overview column text into a count of tourist attractions that were mentioned in the text itself. For example, if the text mentioned ‘Times Square’, the count would be 1. 
-* Sentimental analysis on name and description  :
+* Sentiment analysis on name and description  :
 
 Non English Names and Descriptions were dropped and then sentimental analysis was performed on them to give two scores, a polarity and a compound score and added to the dataframe.  
 * Label Encoder for other objects : 
@@ -147,7 +147,7 @@ After cleaning the data, we eventually used about 40 features (out of the initia
 * The number of reviews per month 
 
 ### Reviews.csv
-We incorporated sentiment analysis on reviews of the Airbnb listings largely in order to engineer new features to be used in predicting the prices and ratings of listings. We classified reviews as positive or negative using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model from the NLTK package [4]. It is a pretrained model that is specifically attuned to sentiments in social media but has been successful when applied to many other domains (see reference below). The VADER model is sensitive to both polarity (positive/negative) and intensity (strength) of emotion; it returns negative, neutral, positive, and compound (normalization of the three other scores) polarity scores.
+We incorporated sentiment analysis on reviews of the Airbnb listings in order to engineer new features to be used in predicting the prices and ratings of listings. We classified reviews as positive or negative using the VADER (Valence Aware Dictionary for Sentiment Reasoning) model from the NLTK package [4]. It is a pretrained model that is specifically attuned to sentiments in social media but has been successful when applied to many other domains (see reference section). The VADER model is sensitive to both polarity (positive/negative) and intensity (strength) of emotion; it returns negative, neutral, positive, and compound (normalization of the three other scores) polarity scores.
 
 First, we cleaned the review data set by taking out reviews that did not have any words (e.g. there were some reviews that were a single period). A preliminary run showed that that reviews with three words or fewer or reviews that were not written in English were frequently misclassified. Therefore, we used the langdetect library to filter out non-English reviews. Looking at the NYC sentiment analysis, interestingly, there were a surprisingly number of French guests given the number of reviews written in French.
 
@@ -165,7 +165,7 @@ Looking at the compound polarity scores, most of the reviews were strongly posit
   <img src="sentiment_imgs/sentiment_borough.png" width="400" />
 </p>
 
-For the other three cities, the polarity distributions of the reviews written in English looked very similar to those of New York with most reviews being very positive. However, while the Amsterdam and Bristol datasets had most reviews written in English, almost half of the reviews in the Hong Kong dataset were written in Chinese or Korean. This distribution of languages in the Hong Kong reviews likely introduced increased error to our Hong Kong analysis and may have contributed to the weak model perfomances. The distribution graph can be found below: 
+For the other three cities, the polarity distributions of the reviews written in English looked very similar to those of New York with most reviews being very positive. However, while the Amsterdam and Bristol datasets had most reviews written in English, almost half of the reviews in the Hong Kong dataset were written in Chinese or Korean. This distribution of languages in the Hong Kong reviews likely introduced increased error to our Hong Kong analysis and may have contributed to the weak model performances. The distribution graph can be found below: 
 
 <p align="center">
   <img src="sentiment_imgs/hk_review_lang_dist.png" width="500"/>
@@ -689,9 +689,9 @@ The histogram shows the z-space component explained variance and the line chart 
 
 We can observe from the Price vs. 365-Availability visuals that more expensive rooms have longer annual availability. As evidenced by the first two cluster scheaper and more short-term rooms are congregated in the north side of NYC; the final cluster is dominant in the southern half of the city and represent the popularity of more expensive and long-term rooms.
 
-We can see from the Price vs. Reviews per Month visuals that rooms with more reviews tend to be congregated in the northern half of the city, possibly because of higher tourism or population, and pricier, less reviewed rooms are in the south side. Notice the lesser frequency of these rooms, as they are luxury condiments.
+We can see from the Price vs. Reviews per Month visuals that rooms with more reviews tend to be congregated in the northern half of the city, possibly because of higher tourism or population, and pricier, less reviewed rooms are in the south side. Notice the lesser frequency of these rooms, as they are luxury accomodations.
 
-We also note from the two sentiment score visuals that even very cheap rooms sometimes get good average ratings.
+We also note from the two sentiment score visuals that even very inexpensive rooms sometimes get good average ratings.
 
 #### Amsterdam, Netherlands
 ##### K-Means Clustering (with Larger Dataset)
@@ -740,7 +740,7 @@ The histogram shows the z-space component explained variance and the line chart 
     <img height="250" width="400" float="left" src="gmm_imgs/hk_sent_map.JPG">
 </p>
 
-We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the seniment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituencies.
+We can observe from this analysis that clusters are generally equal for all three scenarios and rooms tend to be concentrated in the city center. The interesting thing to note here is that Components 2 and 3 of the sentiment visuals cluster rooms with lower prices and higher average sentiment ratings, which is useful for the thrifty purchaser. These clusters are generally distributed fairly equally across the city's constituencies.
 
 #### Bristol, United Kingdom
 ##### K-Means Clustering (with Larger Dataset)
@@ -750,7 +750,7 @@ We can observe from this analysis that clusters are generally equal for all thre
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_bristol.JPG">
 </p>
 
-The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. There were roughly 1200 listings for Bristol. The clusters are generally distributed fairly equally across the city's constituencys.
+The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 40000 with k=3. There were roughly 1200 listings for Bristol. The clusters are generally distributed fairly equally across the city's constituencies.
 
 ##### GMM Analysis
 <p align="left">
@@ -764,10 +764,10 @@ The histogram shows the z-space component explained variance and the line chart 
     <img height="250" width="400" float="left" src="gmm_imgs/bristol_sent_map.JPG">
 </p>
 
-We again observe typically equal clusterings. The Price vs. Avg Sentiment Score visuals are informative here. Although component 1 dominates component 2 (light blue) only contains listings with high sentiment ratings (and slightly highly prices). This is useful for a buyer who want a high quality room irrespective of price. These clusters are generally distributed fairly equally across the city's constituencies.
+We again observe typically equal clusterings. The Price vs. Avg Sentiment Score visuals are informative here. Although component 1 dominates component 2 (light blue) only contains listings with high sentiment ratings (and slightly highly prices). This is useful for a buyer who wants a high quality room irrespective of price. These clusters are generally distributed fairly equally across the city's constituencies.
 
 ### Combining Supervised and Unsupervised Learning
-To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more smiliar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
+To see if we could improve our model predictions for prices, we tried combining our XGBoost model with our KMeans clustering. We applied the XGBoost to each cluster for each city (i.e. 12 runs). However, the results showed no major improvements to prediction errors (in some cases, errors were actually worse). This is likely due to the fact that as the dataset becomes smaller and more similiar, some of rows may start to conflict with each other and make predictions more inaccurate. Our predictions for Bristol had a relatively small RMSE, but the price range of Airbnb listings for this city is more narrow than that of the other three cities, and as a percentage of the range of prices, the predictions are only slightly better than those of the other cities. With all cities, we saw that combining our models performed much better on the training data, but worse on the test data (i.e. our combined model has high variance). 
 
 <p align="center">
     <img src="xgboost_kmeans_results.png" width=400>
@@ -775,13 +775,14 @@ To see if we could improve our model predictions for prices, we tried combining 
 
 ## Discussion and future work
 
-* Cities where the reviews were in English helped us predict price and rating when sentimental analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
-* It also does seem like datasets with smaller number of rows such as Bristol,England tends to perform too well and hence might be overfitting the supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
+* Cities where the reviews were in English helped us predict price and rating when sentiment analysis was performed on these over cities with reviews in other languages. Thus, language translation followed by NLP on those reviews could be performed in order to obtain better results. 
+* It also does seem like datasets with smaller number of rows such as Bristol, England tends to perform too well and hence might be overfitting the data in our supervised models. Future work in this area could include hyperparameter tuning for the Gradient Boosting and XGBoost models. 
 * To reduce the prediction error of our model, one could also try splitting the listings into smaller subsets with different tiers of pricing. Different models may perform better on different subsets. In the case of the XGBoost model, this would also reduce the effect of conflicting data points. 
 
 ## Conclusion 
 * XGBoost and Gradient Boost models did well to predict price and ratings of airbnb listings. 
 * Sentiment analysis was incorporated in K-Means and GMM to provide valid and equal clusterings; when plotted on city maps, these clusterings revealed informative insights about listings in the particular city.
+* Combining XGBoost with KMeans clustering did not provide significant improvement on predictions, but further work on rescoping the data or selecting a smaller subset of features could give better results.
 
 
 ## References 
