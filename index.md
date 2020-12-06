@@ -592,7 +592,7 @@ sklearn.decomposition.PCA APIs performed the dimensionality reduction; internall
 Elbow Method and Silhouette Analysis were utilized to determine the optimal number of clusters. It is shown from the below views that 3 clusters would provide the such optimality. Observe, for instance, the "elbow" at k=3 with an SSE slightly under 39000. We can see from Silhouette Analysis one cluster tends to dominate, suggesting some similarity among listings that cannot be reduced. 
 
 sklearn.cluster.KMeans APIs performed the work of the underlying algorithm and utilize a slightly more advanced algorithm, k-means++.
-<p align="left">
+<p align="center">
     <img height="200" width="350" float="left" src="kmeans_imgs/Elbow.JPG">
 	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis2.JPG">
 	<img height="200" width="300" float="left" src="kmeans_imgs/sc1_kis3.JPG">
