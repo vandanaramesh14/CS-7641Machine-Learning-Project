@@ -255,7 +255,7 @@ We obtained the following results for rating predictions :
 | Mean Absolute Error |2.8132   |
 
 <p align ="center">
-	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="500" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="500"/>
+	<img src="supervised_imgs/random forest/rf_rating_bar.png" width="450" hspace="5" /><img src="supervised_imgs/random forest/rf_rating_line.png" width="450"/>
 <!--   <img src="supervised_imgs/random forest/rf_rating_bar.png" />
  </p>
  <p align ="center">
