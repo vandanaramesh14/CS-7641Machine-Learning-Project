@@ -725,7 +725,7 @@ We can observe fromn this analysis that clusters are generally equal for all thr
     <img height="250" width="250" float="left" src="kmeans_all_cities_imgs/scatter_hk.JPG">
 </p>
 
-The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. There were roughly 3000 listings for Hong Kong. The clusters are generally distributed fairly equally across the city's constituencys.
+The histogram shows the z-space component explained variance and the line chart clearly shows an "elbow" at SSE ~ 50000 with k=3. There were roughly 3000 listings for Hong Kong. The clusters are generally distributed fairly equally across the city's constituencies.
 
 
 ##### GMM Analysis
